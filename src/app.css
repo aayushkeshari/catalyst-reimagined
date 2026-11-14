@@ -19,3 +19,18 @@ dialog{background:var(--surface);color:var(--ink);border:1px solid var(--line);b
 .case-gallery img{height:320px;object-fit:contain;object-position:top;background:var(--page)}.case-gallery figure:first-child img{height:auto;max-height:620px;object-fit:cover;object-position:top}
 
 .uc-brand-mark{display:block;object-fit:contain;flex-shrink:0}.banner-orbit>img{position:absolute;top:110px;left:70px;width:240px;height:auto;opacity:.14}
+
+/* Feedback iteration: readable filters, personal dates, and mobile actions. */
+.filter-panel input[type=time]{display:block;width:100%;margin-top:7px;padding:10px;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--ink);font:inherit;min-height:44px}
+.filter-explanation{flex-basis:100%;font-size:11px;line-height:1.7;color:var(--muted)}
+.waitlist-limits{display:block;max-width:190px;font-size:10px;line-height:1.6;color:var(--muted);text-align:right}
+.metric .conditional-credit-note{color:var(--ink);font-size:11px;line-height:1.7;max-width:250px}
+.transfer-note{padding:18px 22px;margin:0 0 24px;font-size:12px;line-height:1.8}
+.transfer-note summary{font-weight:600;cursor:pointer;min-height:30px}
+.transfer-note p{margin:12px 0;color:var(--muted)}
+.task-date-control{display:flex;flex-direction:column;gap:8px;flex-shrink:0;font-size:11px;color:var(--muted)}
+.task-date-control input{font:inherit;background:var(--surface);color:var(--ink);padding:10px;border:1px solid var(--line);border-radius:5px;min-height:44px;max-width:180px}
+.quick-tour{padding-left:23px}.quick-tour li{padding:10px 0 18px}.quick-tour h3{font-size:16px}.quick-tour p{font-size:13px;line-height:1.8;color:var(--muted);margin:8px 0 12px}
+.feedback-iteration-table{min-width:650px}.feedback-iteration-table td{line-height:1.75}
+@media(max-width:900px){.task-card{flex-wrap:wrap}.task-date-control{margin:0 0 15px 29px}.task-card .task-check{flex-basis:100%}}
+@media(max-width:600px){.section-code{font-size:13px}.section-meeting p,.section-row>.section-meeting .small{font-size:12px!important;line-height:1.65}.section-row{grid-template-columns:80px minmax(0,1fr);gap:14px}.section-seat{flex-wrap:wrap;gap:10px}.section-seat .small-button{min-height:44px;font-size:12px;padding:11px 17px}.section-seat .waitlist-limits{text-align:left;max-width:none;flex-basis:100%;font-size:11px}.filter-panel input[type=time]{font-size:14px}.filter-explanation{font-size:12px}.task-date-control{margin-left:29px;margin-bottom:16px}.task-date-control input{font-size:14px}.transfer-note{padding:17px}.metric .conditional-credit-note{font-size:10px}.quick-tour h3{font-size:15px}}
