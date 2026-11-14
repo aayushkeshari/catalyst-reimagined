@@ -21,7 +21,8 @@
 - [x] Export and embed a captioned 2:54 guided demo with disclosed synthetic narration over captured interface states.
 - [ ] Team confirms this guided format satisfies the assignment, or records the live narration using docs/demo-script.md.
 - [ ] Push/merge source to the intended repository.
-- [ ] Enable deployment and verify the real public app URL.
+- [x] Deploy and verify the Site URL with existing owner-private access.
+- [ ] Explicitly choose public access if required for anonymous submission.
 - [ ] Link the case study from a group member’s portfolio.
 - [ ] Confirm prior checkpoint and critique-presentation submissions.
 - [ ] Present for 5–6 minutes with every group member participating.
