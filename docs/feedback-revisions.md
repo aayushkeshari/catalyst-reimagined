@@ -40,10 +40,14 @@ Developer verification on November 14, 2026:
 - In Brave, verified prerequisite course names and explicit waitlist-limit text. With a Mon/Wed cart, the campus-day filter reduced the catalog from 14 to seven sections. Adding an afternoon start bound reduced it to the matching scheduled section.
 - Set a personal target to November 14, 2026; the interface displayed Today, and the date and label persisted after reload.
 - Opened the optional Quick tour, dismissed it with Escape, and opened portal search with Cmd+K.
-- The local HTTP preview was blocked by the execution environment. Browser checks used the generated standalone build. A fresh mobile viewport check was not completed in this iteration; responsive CSS changes should receive a follow-up device check.
+- The local HTTP preview was blocked by the execution environment. Initial Brave checks used the generated standalone build. Subsequent screenshot checks used the public GitHub Pages app at 1440px and 375px: Home, the confirmed schedule, and class search retained their content without horizontal overflow at 375px; section Add to cart buttons measured 44px high. Expanded mobile filters were captured. These viewport checks do not replace physical-device or assistive-technology testing.
 
 These checks establish implementation behavior. They are not an additional participant retest or a measured before/after usability study. No participant dates, task timings, scores, or follow-up quotations were supplied, so none are added to this record.
 
 ## Next evaluation
 
 Have students try the revised filters, interpret the remaining-credit total, set a target date, and locate familiar tasks. Record actual observations using the existing study protocol and observation sheet. Update this log with follow-up findings when available.
+
+## Current screenshot evidence
+
+The case-study gallery was refreshed on November 14, 2026 with fifteen screenshots of the current red/black interface. It includes time/campus-day filters, personal target dates and urgency, named prerequisites and waitlist limitations, the conditional credit total and transfer-credit explanation, the optional tour, and this feedback-to-change mapping. Desktop captures use a 1440px viewport and mobile captures use 375px. The original Catalyst baseline and the earlier demo video remain separate historical artifacts.

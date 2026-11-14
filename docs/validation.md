@@ -47,3 +47,11 @@ The primary demo profile displays the requested GPA of 3.975 through explicit de
 ## Feedback iteration — November 14, 2026
 
 Added prerequisite names, time and campus-day filters, clearer waitlist limits, personal target dates and urgency, a conditional credit explanation, transfer-credit guidance, platform-aware keyboard hints, and the optional Quick tour. All 26 tests and the production build pass. Brave checks covered the new filters, saved personal dates, tour, and Cmd+K search. See [feedback-revisions.md](feedback-revisions.md) for the exact checks and remaining responsive/participant retest limits.
+
+## Screenshot refresh — November 14, 2026
+
+- Captured the public GitHub Pages application in the current red/black theme with the Aayush demo profile at desktop 1440×1000 and mobile 375×900 viewports. Fifteen images now cover the main pages, comparison, conflict recovery, confirmation, schedule, feedback revisions, tour, filters, and personal targets. The original Catalyst screenshot is preserved.
+- Repeated the two-course conflict/recovery flow in the public app: the overlapping sections blocked confirmation; replacing the conflicting section produced a receipt and two confirmed classes / six credits.
+- Start-after 13:00, end-before 16:00, and campus-day filtering produced three matching sections. Personal targets displayed Today, Upcoming, and Overdue for the example dates.
+- At 375px, Home, confirmed schedule, and class search had a document width of 375px. The two visible Add to cart section actions measured 44px high. The schedule displayed its agenda and expanded filters stacked vertically.
+- Visually inspected refreshed captures. These are developer viewport checks, not a physical-device, screen-reader, or participant retest. The existing MP4 still contains earlier captured states.
