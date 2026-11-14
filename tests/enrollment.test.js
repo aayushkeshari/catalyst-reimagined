@@ -27,3 +27,53 @@ test('calendar export has recurring events with term-specific dates and escaping
 
 test('corrupt stored filter values and receipts cannot break the workspace',()=>{const state=createState(senior);state.searchByTerm[term]={query:99,subject:[],day:null};state.receipts=[null,{id:'bad',courses:[]}];const restored=hydrateState(state,senior);assert.equal(restored.searchByTerm[term].query,'');assert.equal(restored.receipts.length,0);assert.ok(searchSections(restored.searchByTerm[term],restored,term).length>0);});
  test('enrolling an alternative section clears waitlists for the same course',()=>{const waiting=waitlistSection(createState(senior),senior,id('CS5167','003'),term).state;const result=enrollSections(waiting,senior,[id('CS5167','002')],term);assert.equal(result.ok,true);assert.deepEqual(result.state.waitlistByTerm[term],[]);});
+
+test('time bounds are inclusive and apply to every scheduled section',()=>{
+  const state=createState(senior);
+  const results=searchSections({query:'CS5002',startAfter:'09:30',endBefore:'10:50'},state,term);
+  assert.deepEqual(results.map(s=>s.section),['002']);
+  assert.deepEqual(searchSections({startAfter:'14:00',endBefore:'10:00'},state,term),[]);
+  assert.deepEqual(searchSections({startAfter:'10:00',endBefore:'10:00'},state,term),[]);
+  assert.ok(searchSections({query:'CS5167'},state,term).some(s=>!s.meetings.length));
+  assert.ok(searchSections({startAfter:'00:00'},state,term).every(s=>s.meetings.length));
+});
+test('campus-day filter follows the selected term cart and enrollment',()=>{
+  let state=createState(senior);
+  assert.ok(searchSections({fitCampusDays:true},state,term).length>0);
+  state=addToCart(state,id('CS5002'),term).state;
+  const matches=searchSections({fitCampusDays:true},state,term);
+  assert.ok(matches.some(s=>s.code==='CS5167'&&s.section==='001'));
+  assert.ok(!matches.some(s=>s.code==='CS5167'&&s.section==='002'));
+  assert.ok(matches.some(s=>!s.meetings.length));
+  state=enrollSections(state,senior,[id('CS5002')],term).state;
+  assert.ok(!searchSections({fitCampusDays:true},state,term).some(s=>s.meetings.some(m=>m.days.includes('Tue'))));
+});
+test('new filters and valid personal dates survive hydration without crossing profiles',()=>{
+  const state=createState(senior);
+  state.searchByTerm[term]={startAfter:'09:30',endBefore:'15:00',fitCampusDays:true};
+  state.taskDates={'spring-plan':'2026-11-20',advisor:'2026-02-30',contact:'bad',unknown:'2026-11-25'};
+  const restored=hydrateState(JSON.parse(JSON.stringify(state)),senior);
+  assert.equal(restored.searchByTerm[term].startAfter,'09:30');
+  assert.equal(restored.searchByTerm[term].endBefore,'15:00');
+  assert.equal(restored.searchByTerm[term].fitCampusDays,true);
+  assert.deepEqual(restored.taskDates,{'spring-plan':'2026-11-20'});
+  assert.deepEqual(hydrateState(state,freshman).taskDates,{});
+  state.searchByTerm[term]={startAfter:'24:00',endBefore:900};
+  assert.equal(hydrateState(state,senior).searchByTerm[term].startAfter,'');
+});
+test('prerequisite errors name the required course',()=>{
+  const errors=eligibility(createState(freshman),freshman,s('CS5167'),term);
+  assert.ok(errors.some(e=>e.code==='prerequisite'&&e.message.includes('CS2028C')&&e.message.includes('Data Structures')));
+});
+test('personal target dates handle leap years and urgency without invented deadlines',async()=>{
+  const {validTaskDate,taskDateStatus,keyboardShortcut}=await import('../src/lib/model.js');
+  assert.equal(validTaskDate('2028-02-29'),true);
+  assert.equal(validTaskDate('2027-02-29'),false);
+  assert.equal(taskDateStatus('2026-11-13','2026-11-14'),'Overdue');
+  assert.equal(taskDateStatus('2026-11-14','2026-11-14'),'Today');
+  assert.equal(taskDateStatus('2026-11-15','2026-11-14'),'Upcoming');
+  assert.equal(taskDateStatus('','2026-11-14'),'No personal target');
+  assert.equal(keyboardShortcut('MacIntel'),'⌘ K');
+  assert.equal(keyboardShortcut('Win32'),'Ctrl K');
+  assert.equal(keyboardShortcut('Linux x86_64'),'Ctrl K');
+});
