@@ -99,7 +99,7 @@ export function academicSummary(profile,state) {
   const majorCodes=new Set(['CS','EECE','IT','MATH','STAT','PHYS','CHEM','ENED','PD']);
   const category = code => majorCodes.has(code.replace(/\d.*$/,''))?'Major':code.startsWith('ENGL')||code.startsWith('COMM')||code.startsWith('HIST')||code.startsWith('PSYC')||code.startsWith('PHIL')||code.startsWith('SOCI')?'General education':'Elective';
   const requirements=[...new Map(profile.plan.terms.flatMap(t=>t.courses).filter(c=>c.credits>0).map(c=>[c.code,c])).values()].map(c=>({...c,category:c.fulfills?.includes('Elective')?'Elective':category(c.code),status:passed.has(c.code)?'Complete':current.some(s=>s.code===c.code)?'In progress':'Remaining'}));
-  return {earned,underway,minimum,remaining:Math.max(0,minimum-earned-underway),percent:Math.min(100,Math.round(earned/minimum*100)),gpa:profile.transcript.entries.some(e=>/^[A-DF][+-]?$/.test(e.grade))?cumulativeGPA(profile.transcript).toFixed(3):null,requirements};
+  return {earned,underway,minimum,remaining:Math.max(0,minimum-earned-underway),percent:Math.min(100,Math.round(earned/minimum*100)),gpa:Number.isFinite(profile.demoGpa)?profile.demoGpa.toFixed(3):profile.transcript.entries.some(e=>/^[A-DF][+-]?$/.test(e.grade))?cumulativeGPA(profile.transcript).toFixed(3):null,requirements};
 }
 export function searchSections(context, state, termId) {
   const query=(context.query??'').toLowerCase().replace(/\s/g,'');

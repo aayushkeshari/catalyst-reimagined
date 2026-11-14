@@ -38,3 +38,7 @@ No exhaustive browser audit, screen-reader audit, WCAG conformance, or measured 
 ## Publication
 
 Source synchronization and deployment succeeded through the supported Sites workflow. The native deployment service verified the production URL; owner-private access was preserved for that separate deployment. The project now also has a public GitHub Pages workflow in aayushkeshari/catalyst-reimagined. See deployment-status.md for IDs and URL. Caption timing validation confirmed 38 ordered cues ending within the 174-second video.
+
+## Profile and branding update
+
+The primary demo profile displays the requested GPA of 3.975 through explicit demo-profile metadata; synthetic transcript grades remain unchanged. The progress page labels this as a demo profile GPA. The other profile still uses its transcript-derived GPA. The UC monogram in the sidebar and home banner is stored locally in static/uc-monogram.svg, sourced from the logo-symbol group on https://www.uc.edu/about/marketing-communications/brand-guide/logos-marks.html. The independent student prototype notice remains visible.
