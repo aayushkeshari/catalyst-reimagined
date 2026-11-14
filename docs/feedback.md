@@ -1,4 +1,4 @@
- Illustrative feedback | Possible design response |
+| Fictional perspective | Illustrative feedback | Possible design response |
 | --- | --- | --- |
 | First-year student | “The prerequisite code doesn’t mean much to me yet. Seeing the course name beside it would help.” | Show prerequisite names alongside course codes. |
 | Graduating senior | “The confirmation number is reassuring. I’d keep that screen because adding something to a cart doesn’t feel like finishing registration.” | Preserve the explicit receipt and enrollment status. |
