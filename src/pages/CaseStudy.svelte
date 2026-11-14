@@ -155,10 +155,10 @@ const modules = [
   </section>
 
   <section class="case-section" id="demo" tabindex="-1">
-    <span class="eyebrow">07 / Demo & presentation</span>
-    <h2>See the workflow in action.</h2>
-    {#if project.demoVideo}<p>The 2:54 guided walkthrough uses synthetic narration over earlier captured prototype states. Its theme and sample profile predate the screenshots above; it does not show every subsequent revision and is not a live screen recording or participant test.</p><video controls preload="metadata"><source src={project.demoVideo} type="video/mp4"/><track kind="captions" src="./demo-captions.vtt" srclang="en" label="English" default/></video>{/if}
-    <p>The final presentation summarizes the problem, research, design decisions, workflow, verification, and next steps, with timed notes for the team.</p><a class="button secondary" href="./presentation.html" target="_blank" rel="noreferrer">Open final presentation<Icon name="external" size={15}/></a>
+    <span class="eyebrow">07 / Presentation</span>
+    <h2>Walk through the design story.</h2>
+    <p>The final presentation summarizes the problem, research, design decisions, workflow, verification, and next steps, with timed notes for the team.</p>
+    <a class="button secondary" href="./presentation.html" target="_blank" rel="noreferrer">Open final presentation<Icon name="external" size={15}/></a>
   </section>
 
   <section class="case-section" id="future" tabindex="-1">
@@ -170,7 +170,7 @@ const modules = [
       <li><strong>Evaluate accessibility more broadly.</strong> Run screen-reader sessions, keyboard and focus checks, zoom/reflow checks, contrast review, and physical-device testing. The current responsive screenshots and semantic controls do not constitute a WCAG conformance audit.</li>
       <li><strong>Extend the unfinished academic capabilities.</strong> The transfer-credit explanation and waitlist labels show where the present prototype stops. A next iteration could add advisor-reviewed equivalencies, meaningful waitlist position and notification states, linked lecture/lab choices, and changing seat inventory.</li>
       <li><strong>Validate academic rules and dates.</strong> Replace illustrative classifications, graduation assumptions, and milestones with an advisor-approved model before considering real university integration. Keep personal targets clearly separate from official deadlines.</li>
-      <li><strong>Refresh the live walkthrough.</strong> Record a current team-narrated demo that includes the revised filters, mobile agenda, and personal targets; retain captions and verify their timing.</li>
+      <li><strong>Record a narrated demonstration.</strong> Capture the current interface with team-member voiceover, showing class discovery, conflict recovery, confirmation, progress, and personal targets. Add captions and verify the final recording.</li>
     </ol>
     <p><strong>Reflection:</strong> the most consequential redesign was the distinction between a plan and a confirmed outcome. Once that distinction was explicit in the data and workflow, the interface could explain what had happened, what was still uncertain, and how to continue. Future research should test whether students interpret those distinctions as intended.</p>
     <p class="fine-print">Progress toward unfinished features is visible above: the class-search screenshot shows the full-section waitlist limitations, and the academic-progress screenshot shows transfer-credit guidance without an equivalency evaluator. These are documented scope boundaries, not completed integrations.</p>
