@@ -37,4 +37,4 @@ No exhaustive browser audit, screen-reader audit, WCAG conformance, or measured 
 
 ## Publication
 
-Source synchronization and deployment succeeded through the supported Sites workflow. The native deployment service verified the production URL; owner-private access was preserved. See deployment-status.md for IDs and URL. Caption timing validation confirmed 38 ordered cues ending within the 174-second video.
+Source synchronization and deployment succeeded through the supported Sites workflow. The native deployment service verified the production URL; owner-private access was preserved for that separate deployment. The project now also has a public GitHub Pages workflow in aayushkeshari/catalyst-reimagined. See deployment-status.md for IDs and URL. Caption timing validation confirmed 38 ordered cues ending within the 174-second video.

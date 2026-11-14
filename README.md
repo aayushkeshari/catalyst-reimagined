@@ -133,4 +133,4 @@ The production build and 21 domain tests pass. The prior native-browser walkthro
 
 The captioned 2:54 guided walkthrough is embedded in the case study and available at static/demo.mp4. It uses synthetic narration over captured interface states, clearly disclosed in the video and page; it is not a live screen recording or participant study. Regenerate on macOS with `swift scripts/render-walkthrough.swift`.
 
-Published and verified at https://catalyst-redesign-aayush-2026.realgiant9.chatgpt.site with the existing owner-private audience preserved. See docs/deployment-status.md for deployment details. Real participant feedback, team review, portfolio linking, and actual presentation/submission remain team tasks.
+Published and verified at https://aayushkeshari.github.io/catalyst-reimagined/ on GitHub Pages. See docs/deployment-status.md for deployment details. Real participant feedback, team review, portfolio linking, and actual presentation/submission remain team tasks.
