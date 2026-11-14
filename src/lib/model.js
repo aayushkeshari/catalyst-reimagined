@@ -1,11 +1,11 @@
-import { TERMS, initialSchedule, sectionById, SECTIONS } from './catalog.js';
+import { TERMS, initialSchedule, sectionById, SECTIONS, courseLabel } from './catalog.js';
 import { earnedCredits, cumulativeGPA, isPassingGrade } from './data/progression.js';
 
 export { isPassingGrade };
 export const SCHEMA_VERSION = 2;
 export const CREDIT_LIMIT = 18;
 export function createState(profile) {
-  return { version: SCHEMA_VERSION, userId: profile.id, termId: 'spring-2027', enrolledByTerm: { 'fall-2026': initialSchedule(profile), 'spring-2027': [] }, cartByTerm: {}, waitlistByTerm: {}, receipts: [], completedTasks: [], savedScholarships: [], preferences: { reminders: true, compactSchedule: false }, searchByTerm: {}, reviewChecklist: [] };
+  return { version: SCHEMA_VERSION, userId: profile.id, termId: 'spring-2027', enrolledByTerm: { 'fall-2026': initialSchedule(profile), 'spring-2027': [] }, cartByTerm: {}, waitlistByTerm: {}, receipts: [], completedTasks: [], taskDates: {}, savedScholarships: [], preferences: { reminders: true, compactSchedule: false }, searchByTerm: {}, reviewChecklist: [] };
 }
 export function hydrateState(raw, profile) {
   const fallback = createState(profile);
@@ -17,9 +17,10 @@ export function hydrateState(raw, profile) {
     enrolledByTerm: { ...fallback.enrolledByTerm, 'spring-2027': [...new Map(enrolled.map(s => [s.code,s])).values()] },
     cartByTerm: { 'spring-2027': cleanIds(raw.cartByTerm?.['spring-2027']) }, waitlistByTerm: { 'spring-2027': cleanIds(raw.waitlistByTerm?.['spring-2027']) },
     receipts: Array.isArray(raw.receipts) ? raw.receipts.filter(r=>r && typeof r.id==='string' && TERMS.some(t=>t.id===r.termId) && typeof r.timestamp==='string' && Number.isFinite(Date.parse(r.timestamp)) && Array.isArray(r.courses) && r.courses.every(c=>c && typeof c.code==='string' && typeof c.title==='string' && typeof c.section==='string' && Number.isFinite(c.credits))).slice(0,30) : [], completedTasks: Array.isArray(raw.completedTasks) ? raw.completedTasks.filter(x => typeof x === 'string') : [],
+    taskDates: Object.fromEntries(Object.entries(raw.taskDates && typeof raw.taskDates === 'object' ? raw.taskDates : {}).filter(([id,date]) => ['spring-plan','advisor','contact'].includes(id) && validTaskDate(date))),
     savedScholarships: Array.isArray(raw.savedScholarships) ? raw.savedScholarships.filter(x => typeof x === 'string') : [],
     preferences: { reminders: raw.preferences?.reminders !== false, compactSchedule: raw.preferences?.compactSchedule === true },
-    searchByTerm: Object.fromEntries(TERMS.map(t=>{const c=raw.searchByTerm?.[t.id]??{};return [t.id,{query:typeof c.query==='string'?c.query:'',subject:typeof c.subject==='string'?c.subject:'All subjects',mode:typeof c.mode==='string'?c.mode:'All formats',day:typeof c.day==='string'?c.day:'',openOnly:c.openOnly===true,hideConflicts:c.hideConflicts===true}];})),
+    searchByTerm: Object.fromEntries(TERMS.map(t=>{const c=raw.searchByTerm?.[t.id]??{};return [t.id,{query:typeof c.query==='string'?c.query:'',subject:typeof c.subject==='string'?c.subject:'All subjects',mode:typeof c.mode==='string'?c.mode:'All formats',day:typeof c.day==='string'?c.day:'',openOnly:c.openOnly===true,hideConflicts:c.hideConflicts===true,startAfter:validTime(c.startAfter)?c.startAfter:'',endBefore:validTime(c.endBefore)?c.endBefore:'',fitCampusDays:c.fitCampusDays===true}];})),
     reviewChecklist: Array.isArray(raw.reviewChecklist) ? raw.reviewChecklist.filter(x => typeof x === 'string') : [] };
 }
 export const creditSum = courses => courses.reduce((total,c) => total+c.credits,0);
@@ -42,7 +43,7 @@ export function eligibility(state, profile, section, termId, additional = []) {
   const passed = new Set(profile.transcript.entries.filter(e => isPassingGrade(e.grade)).map(e => e.code));
   const priorInProgress = termId==='spring-2027' ? new Set((state.enrolledByTerm['fall-2026'] ?? []).map(c => c.code)) : new Set();
   const missing = (section.prerequisites ?? []).filter(code => !passed.has(code) && !priorInProgress.has(code));
-  if (missing.length) row('prerequisite',`Missing prerequisite: ${missing.join(', ')}.`, 'Choose an introductory course or contact academic advising.');
+  if (missing.length) row('prerequisite',`Missing prerequisite: ${missing.map(courseLabel).join(', ')}.`, 'Choose an introductory course or contact academic advising.');
   const conflict = enrolled.find(s => conflictBetween(s,section));
   if (conflict) row('conflict',`Overlaps ${conflict.code} · section ${conflict.section}.`,'Compare the other sections and choose a time that fits.');
   if (creditSum(enrolled)+section.credits>CREDIT_LIMIT) row('credits',`This would exceed the ${CREDIT_LIMIT}-credit demo limit.`,'Remove a course or discuss an overload with your advisor.');
@@ -101,9 +102,37 @@ export function academicSummary(profile,state) {
   const requirements=[...new Map(profile.plan.terms.flatMap(t=>t.courses).filter(c=>c.credits>0).map(c=>[c.code,c])).values()].map(c=>({...c,category:c.fulfills?.includes('Elective')?'Elective':category(c.code),status:passed.has(c.code)?'Complete':current.some(s=>s.code===c.code)?'In progress':'Remaining'}));
   return {earned,underway,minimum,remaining:Math.max(0,minimum-earned-underway),percent:Math.min(100,Math.round(earned/minimum*100)),gpa:Number.isFinite(profile.demoGpa)?profile.demoGpa.toFixed(3):profile.transcript.entries.some(e=>/^[A-DF][+-]?$/.test(e.grade))?cumulativeGPA(profile.transcript).toFixed(3):null,requirements};
 }
+export const validTime = value => typeof value === 'string' && /^(?:[01]\d|2[0-3]):[0-5]\d$/.test(value);
+export function plannedCampusDays(state, termId) {
+  const courses = [...(state.enrolledByTerm[termId] ?? []), ...(state.cartByTerm[termId] ?? []).map(sectionById).filter(Boolean)];
+  const selected = new Set(courses.flatMap(s => s.meetings.flatMap(m => m.days)));
+  return ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].filter(d => selected.has(d));
+}
 export function searchSections(context, state, termId) {
   const query=(context.query??'').toLowerCase().replace(/\s/g,'');
-  return SECTIONS.filter(s=>s.termId===termId && (!query || `${s.code}${s.title}${s.instructor}`.toLowerCase().replace(/\s/g,'').includes(query)) && (!context.subject||context.subject==='All subjects'||s.subject===context.subject) && (!context.openOnly||s.seats>0) && (!context.mode||context.mode==='All formats'||s.mode===context.mode) && (!context.day||s.meetings.some(m=>m.days.includes(context.day))) && (!context.hideConflicts||!(state.enrolledByTerm[termId]??[]).some(x=>conflictBetween(s,x))));
+  const start = validTime(context.startAfter) ? minutes(context.startAfter) : null;
+  const end = validTime(context.endBefore) ? minutes(context.endBefore) : null;
+  if (start !== null && end !== null && start >= end) return [];
+  const campusDays = plannedCampusDays(state, termId);
+  return SECTIONS.filter(s => s.termId===termId
+    && (!query || `${s.code}${s.title}${s.instructor}`.toLowerCase().replace(/\s/g,'').includes(query))
+    && (!context.subject || context.subject==='All subjects' || s.subject===context.subject)
+    && (!context.openOnly || s.seats>0)
+    && (!context.mode || context.mode==='All formats' || s.mode===context.mode)
+    && (!context.day || s.meetings.some(m=>m.days.includes(context.day)))
+    && (!context.hideConflicts || !(state.enrolledByTerm[termId]??[]).some(x=>conflictBetween(s,x)))
+    && ((start === null && end === null) || (s.meetings.length > 0 && s.meetings.every(m => (start === null || minutes(m.start) >= start) && (end === null || minutes(m.end) <= end))))
+    && (!context.fitCampusDays || !campusDays.length || s.meetings.every(m => m.days.every(d => campusDays.includes(d)))));
+}
+export const keyboardShortcut = platform => /Mac|iPhone|iPad|iPod/i.test(platform ?? '') ? '⌘ K' : 'Ctrl K';
+export function validTaskDate(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const date = new Date(`${value}T12:00:00Z`);
+  return Number.isFinite(date.getTime()) && date.toISOString().slice(0,10) === value;
+}
+export function taskDateStatus(value, today) {
+  if (!validTaskDate(value)) return 'No personal target';
+  return value < today ? 'Overdue' : value === today ? 'Today' : 'Upcoming';
 }
 export function scheduleICS(courses,termId) {
   const spring=termId==='spring-2027';

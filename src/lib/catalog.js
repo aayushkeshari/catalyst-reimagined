@@ -29,6 +29,11 @@ export const COURSES = [
 ];
 export const SECTIONS = COURSES.flatMap(c => c.sections.map(s => ({ ...s, title: c.title, credits: c.credits, subject: c.subject, category: c.category, description: c.description, prerequisites: c.prerequisites })));
 export const sectionById = id => SECTIONS.find(s => s.id === id);
+export function courseLabel(code) {
+  const course = COURSES.find(c => c.code === code) ?? PROFILES.flatMap(p => p.plan.terms.flatMap(t => t.courses)).find(c => c.code === code);
+  return course?.title ? `${code} — ${course.title}` : code;
+}
+
 const currentTimes = {
   CS5001: meeting(['Mon','Wed'],'13:00','14:20','Rhodes 801'), CS5170: meeting(['Tue','Thu'],'11:00','12:20','Rhodes 801'),
   CS5155: meeting(['Mon','Wed'],'10:00','11:20','Baldwin 641'), CS5165: meeting(['Tue','Thu'],'14:00','15:20','Rhodes 601'), ECON1001: meeting(['Fri'],'09:00','11:50','McMicken 120'),

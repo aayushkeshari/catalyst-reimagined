@@ -1,0 +1,14 @@
+// Feedback-to-change mapping; verification is developer QA, not a participant retest.
+export const feedbackRevisions = [
+  {id:'F01',perspective:'First-year student',concern:'Prerequisite codes need course names.',change:'Course names now accompany prerequisite codes in results, details, comparison, and blocking messages.',status:'Implemented'},
+  {id:'F02',perspective:'Graduating senior',concern:'Keep the clear confirmation and receipt.',change:'Retained the dated enrollment receipt and explicit confirmed schedule.',status:'Retained'},
+  {id:'F03',perspective:'Commuter student',concern:'Avoid adding extra campus days.',change:'Added Keep to my campus days, using the selected term’s enrolled classes and cart. Asynchronous sections add no campus day.',status:'Implemented'},
+  {id:'F04',perspective:'Student working part time',concern:'Filter sections around work hours.',change:'Added start/end time bounds, inclusive at the boundary. Every meeting must fit; invalid ranges explain how to recover.',status:'Implemented'},
+  {id:'F05',perspective:'Student using a phone',concern:'Make section times and the primary action easier to scan.',change:'Increased mobile meeting text and section emphasis; section actions now have a minimum 44px height.',status:'Implemented'},
+  {id:'F06',perspective:'Transfer student',concern:'Distinguish transfer credits from requirement equivalencies.',change:'Added an expandable explanation and advising link. Evaluating transfer credit remains outside this prototype.',status:'Clarified'},
+  {id:'F07',perspective:'Student considering a full section',concern:'Explain waitlist position and notifications.',change:'Full-section controls and the waitlist now state that queue positions and notifications are unavailable in this demo.',status:'Clarified'},
+  {id:'F08',perspective:'Keyboard user',concern:'Show the shortcut for the current platform.',change:'The portal search hint shows ⌘ K on Apple platforms and Ctrl K elsewhere. Both shortcut combinations remain supported.',status:'Implemented'},
+  {id:'F09',perspective:'Student planning graduation',concern:'Emphasize that current credits still need passing grades.',change:'The remaining-credit metric explicitly states the passing assumption and the total credits not yet earned.',status:'Implemented'},
+  {id:'F10',perspective:'Student managing several deadlines',concern:'Replace vague dates with useful dates and urgency.',change:'Students can set personal target dates, with Today, Overdue, Upcoming, or Completed labels. No official deadline is invented.',status:'Implemented'},
+  {id:'F11',perspective:'Student who prefers the existing layout',concern:'Help locate familiar tasks in the new navigation.',change:'Added an optional Quick tour in the footer, with direct links to class planning and personal tasks.',status:'Implemented'}
+];
