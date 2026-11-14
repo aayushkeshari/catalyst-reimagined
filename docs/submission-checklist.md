@@ -17,7 +17,8 @@
 ## Requires actual external completion
 
 - [ ] Team reviews the analysis, code, and materials before submission.
-- [ ] Collect actual feedback on the design/prototype and document changes from it.
+- [x] Record the supplied feedback and document implementation responses in docs/feedback-revisions.md.
+- [ ] Retest the revised controls with students and record follow-up findings.
 - [x] Export and embed a captioned 2:54 guided demo with disclosed synthetic narration over captured interface states.
 - [ ] Team confirms this guided format satisfies the assignment, or records the live narration using docs/demo-script.md.
 - [x] Push source to aayushkeshari/catalyst-reimagined for Pages deployment.

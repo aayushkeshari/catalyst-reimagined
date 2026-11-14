@@ -42,3 +42,8 @@ Source synchronization and deployment succeeded through the supported Sites work
 ## Profile and branding update
 
 The primary demo profile displays the requested GPA of 3.975 through explicit demo-profile metadata; synthetic transcript grades remain unchanged. The progress page labels this as a demo profile GPA. The other profile still uses its transcript-derived GPA. The UC monogram in the sidebar and home banner is stored locally in static/uc-monogram.svg, sourced from the logo-symbol group on https://www.uc.edu/about/marketing-communications/brand-guide/logos-marks.html. The independent student prototype notice remains visible.
+
+
+## Feedback iteration — November 14, 2026
+
+Added prerequisite names, time and campus-day filters, clearer waitlist limits, personal target dates and urgency, a conditional credit explanation, transfer-credit guidance, platform-aware keyboard hints, and the optional Quick tour. All 26 tests and the production build pass. Brave checks covered the new filters, saved personal dates, tour, and Cmd+K search. See [feedback-revisions.md](feedback-revisions.md) for the exact checks and remaining responsive/participant retest limits.

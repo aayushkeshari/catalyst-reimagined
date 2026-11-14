@@ -24,7 +24,7 @@ See heuristic-evaluation.md for specific findings, evidence classifications, sev
 
 The linked Figma contains home list and calendar views, Classes & schedule, Academic progress, and Academic services. The implemented interaction states extend those static frames. The implementation uses college-inspired red and black with neutral surfaces and adds responsive behavior.
 
-No participant feedback was available or collected during this implementation. The feedback log is intentionally empty. Prepared materials support a future think-aloud evaluation; they are not results. Do not retrospectively label the source review as student feedback on the Figma.
+The project author reports receiving the eleven comments recorded in feedback.md. The subsequent implementation responses and developer checks are documented in feedback-revisions.md and the public case study. A structured think-aloud retest has not been recorded; the prepared study protocol and observation sheets remain available for that next evaluation.
 
 ## Claims this project can make now
 
@@ -39,4 +39,4 @@ No participant feedback was available or collected during this implementation. T
 - Students prefer the redesign.
 - Students understand the cart/waitlist/enrolled distinction more reliably.
 - The interface meets WCAG 2.2 AA.
-- The design was iterated after participant feedback.
+- Students understand or prefer the revised controls after a follow-up evaluation.
