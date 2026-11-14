@@ -18,7 +18,8 @@
 
 - [ ] Team reviews and takes ownership of AI-assisted analysis, code, and materials.
 - [ ] Collect actual feedback on the design/prototype and document changes from it.
-- [ ] Record and caption the 2–3 minute narrated interface demo; embed it in the case study.
+- [x] Export and embed a captioned 2:54 guided demo with disclosed synthetic narration over captured interface states.
+- [ ] Team confirms this guided format satisfies the assignment, or records the live narration using docs/demo-script.md.
 - [ ] Push/merge source to the intended repository.
 - [ ] Enable deployment and verify the real public app URL.
 - [ ] Link the case study from a group member’s portfolio.

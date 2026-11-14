@@ -127,10 +127,10 @@ In `src/lib/project.js`, update the repository URL after pushing and set `publis
 - [W3C status-message guidance](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html)
 - [W3C reflow guidance](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
 
-## Current delivery limits
+## Current delivery status
 
-The production bundle and 21 domain tests pass. The actual interface was reviewed in native browsers, including comparison, conflict recovery, successful enrollment, drop/undo, profile separation, and the mobile agenda. See docs/validation.md for exact coverage.
+The production build and 21 domain tests pass. The prior native-browser walkthrough is preserved in docs/validation.md. This continuation also verified HTTP 200 from the local preview; fresh browser interaction was unavailable because the browser access host was down.
 
-The public upload is blocked by this session’s network policy. A private Site identity is preserved for continuing publication; see docs/deployment-status.md. The upstream GitHub repository has not been modified.
+The captioned 2:54 guided walkthrough is embedded in the case study and available at static/demo.mp4. It uses synthetic narration over captured interface states, clearly disclosed in the video and page; it is not a live screen recording or participant study. Regenerate on macOS with `swift scripts/render-walkthrough.swift`.
 
-The narrated recording is not complete. docs/demo-script.md and docs/demo-storyboard.json are ready; an optional macOS renderer is included, but its export was unavailable in this restricted environment. Do not submit the storyboard or script as a completed video. Real participant feedback also remains outstanding.
+Publication is being resumed with the existing owner-private Site identity. See docs/deployment-status.md for the verified outcome. Real participant feedback, team review, portfolio linking, and actual presentation/submission remain team tasks.

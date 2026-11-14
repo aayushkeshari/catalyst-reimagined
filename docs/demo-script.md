@@ -1,6 +1,6 @@
 # Narrated live demo — target 2 minutes 30 seconds
 
-Status: recording script, not a completed video. Rehearse once before capturing. Use the Arthur demo account, reset it, select Spring 2027, close unrelated tabs, and record only the app. Keep the pointer still while explaining. Record narration yourself or clearly identify any synthetic narration; do not imply a generated voice is your own recording.
+Status: live-recording script retained for team use. A separate 2:54 captioned guided video is now exported and embedded; it uses disclosed synthetic narration over captured states. Rehearse once before capturing. Use the Arthur demo account, reset it, select Spring 2027, close unrelated tabs, and record only the app. Keep the pointer still while explaining. Record narration yourself or clearly identify any synthetic narration; do not imply a generated voice is your own recording.
 
 ## 0:00–0:18 — Home
 

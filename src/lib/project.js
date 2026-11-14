@@ -3,7 +3,7 @@ export const project = {
   team: ['Aayush Keshari', 'Nipun Chandra', 'Shivam Kharangate'],
   repository: 'https://github.com/nightfury3128/UI-catalyst',
   figma: 'https://www.figma.com/design/QmzVctFez8wJ2DL9re1hA9/Untitled?node-id=0-1',
-  demoVideo: '',
+  demoVideo: './demo.mp4',
   publishedUrl: '',
   screenshots: [
     { src: './research/home.png', alt: 'Implemented Catalyst dashboard with a next-semester planning action and student essentials.', caption: 'The implemented home groups common tasks and makes spring planning a clear next action.' },

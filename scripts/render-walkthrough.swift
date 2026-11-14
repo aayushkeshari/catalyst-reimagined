@@ -13,7 +13,7 @@ var durations:[Double]=[]
 for (i,segment) in segments.enumerated(){
  let text=tmp.appendingPathComponent("part-\(i).txt");try segment.narration.write(to:text,atomically:true,encoding:.utf8)
  let audio=tmp.appendingPathComponent("part-\(i).aiff")
- let process=Process();process.executableURL=URL(fileURLWithPath:"/usr/bin/say");process.arguments=["-v","Samantha","-r","175","-o",audio.path,"-f",text.path];try process.run();process.waitUntilExit()
+ let process=Process();process.executableURL=URL(fileURLWithPath:"/usr/bin/say");process.arguments=["-v","Samantha","-r","200","-o",audio.path,"-f",text.path];try process.run();process.waitUntilExit()
  guard process.terminationStatus==0 else {fatalError("Speech generation failed")}
  let asset=AVURLAsset(url:audio);let seconds=CMTimeGetSeconds(asset.duration);guard seconds.isFinite && seconds>1 else {throw NSError(domain:"CatalystMedia",code:1,userInfo:[NSLocalizedDescriptionKey:"Speech export is unavailable in this restricted execution environment. Record the live demo with docs/demo-script.md, or run this optional helper in a local environment with media access."])};audioAssets.append(asset);durations.append(seconds+1.2)
 }

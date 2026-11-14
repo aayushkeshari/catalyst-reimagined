@@ -24,13 +24,17 @@ Tested the actual rendered standalone build using native browser interactions, n
 - Academic progress and academic services render with their respective data and controls.
 - Narrow viewport: observed a 400px home agenda and a 375px confirmed-schedule agenda retaining the meeting details. The 375px screenshot is included.
 
-## Limits
+## Continuation verification
 
-A normal HTTP preview server could not start because this session denied opening a listening port (`listen EPERM 127.0.0.1:5173`). The production bundle was reviewed through its self-contained file preview instead. This does not establish that the public host works until deployment is verified.
+- Re-ran syntax checks, all 21 domain tests, and production build successfully.
+- Local Vite HTTP preview now starts and responds with HTTP 200. The earlier listening-port restriction no longer applies.
+- Browser access host was unavailable in this continuation; prior observed browser coverage above is retained, without claiming fresh interactive coverage.
+- Exported static/demo.mp4: 174 seconds, 1920×1080, one video track and one audio track. Extracted and visually inspected the conflict-review frame at 80 seconds.
+- Added matching English WebVTT captions and embedded the video in the case study. Captions use sentence timings estimated from word counts; they have not had a full playback/accessibility review.
+- Video is a guided walkthrough of captured states with disclosed synthetic narration. It is not a live interface recording, participant evidence, or team-member narration.
 
-No claim of exhaustive browser coverage, a complete screen-reader audit, WCAG conformance, or measured participant usability improvements. The study sheets are intentionally empty.
+No exhaustive browser audit, screen-reader audit, WCAG conformance, or measured participant usability improvement is claimed. Study sheets remain empty.
 
-## Publication and media export
+## Publication
 
-- Private hosting registration succeeded; the exact identity is persisted in .openai/hosting.json. Source upload failed because the restricted environment could not resolve git.chatgpt-team.site. No production deployment is claimed.
-- An optional local macOS narrated-walkthrough renderer was prepared (scripts/render-walkthrough.swift plus docs/demo-storyboard.json). Its export attempt failed under the session’s media restrictions; no usable video was produced. It is not part of npm build and is not a completed demo deliverable. The live recording script remains ready for the team.
+Resuming the existing private Site through the supported source helper. See deployment-status.md for the final result.
