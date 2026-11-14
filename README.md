@@ -40,7 +40,7 @@ npm run preview
 
 ## Explore the core scenario
 
-1. Choose **Arthur Morgan** in the top-right profile menu.
+1. Choose **Aayush Keshari** in the top-right profile menu.
 2. Under Classes & schedule, choose **Spring 2027**.
 3. Add **CS5002 section 001** and **CS5167 section 001** to the cart.
 4. Open the cart. Read the overlap explanation; review is blocked until the conflict is resolved.

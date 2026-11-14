@@ -22,7 +22,7 @@ See heuristic-evaluation.md for specific findings, evidence classifications, sev
 
 ## Prototype design and feedback
 
-The linked Figma contains home list and calendar views, Classes & schedule, Academic progress, and Academic services. The implemented interaction states extend those static frames. The implementation preserves the overall navy/neutral visual direction and adds responsive behavior.
+The linked Figma contains home list and calendar views, Classes & schedule, Academic progress, and Academic services. The implemented interaction states extend those static frames. The implementation uses college-inspired red and black with neutral surfaces and adds responsive behavior.
 
 No participant feedback was available or collected during this implementation. The feedback log is intentionally empty. Prepared materials support a future think-aloud evaluation; they are not results. Do not retrospectively label the source review as student feedback on the Figma.
 
