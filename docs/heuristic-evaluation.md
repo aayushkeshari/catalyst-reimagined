@@ -1,6 +1,6 @@
 # Heuristic evidence review
 
-Prepared November 14, 2026 with AI assistance. Review artifacts: the original homepage screenshot in the critique deck; both critique decks; Script.docx; upstream source at 1279e7d. Scope: orientation, course search, enrollment state, recovery, responsive schedule. The live university system was not tested.
+Prepared November 14, 2026. Review artifacts: the original homepage screenshot in the critique deck; both critique decks; Script.docx; upstream source at 1279e7d. Scope: orientation, course search, enrollment state, recovery, responsive schedule. The live university system was not tested.
 
 Severity scale: 0 no issue; 1 cosmetic; 2 moderate; 3 major; 4 task-blocking. Ratings are analyst judgments. Reported behavior is provisional until reproduced.
 

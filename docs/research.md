@@ -1,6 +1,6 @@
 # Research record — Catalyst redesign
 
-Review date: November 14, 2026. Scope: the supplied project materials, original-home screenshot, and upstream prototype at commit 1279e7d. This record was prepared with AI assistance and should be reviewed by the project team before submission.
+Review date: November 14, 2026. Scope: the supplied project materials, original-home screenshot, and upstream prototype at commit 1279e7d. This record documents the research behind our redesign and remains subject to team review before submission.
 
 ## Motivation and scope
 

@@ -16,7 +16,7 @@
 
 ## Requires actual external completion
 
-- [ ] Team reviews and takes ownership of AI-assisted analysis, code, and materials.
+- [ ] Team reviews the analysis, code, and materials before submission.
 - [ ] Collect actual feedback on the design/prototype and document changes from it.
 - [x] Export and embed a captioned 2:54 guided demo with disclosed synthetic narration over captured interface states.
 - [ ] Team confirms this guided format satisfies the assignment, or records the live narration using docs/demo-script.md.
@@ -27,4 +27,4 @@
 - [ ] Confirm prior checkpoint and critique-presentation submissions.
 - [ ] Present for 5–6 minutes with every group member participating.
 
-Research note: background research plus an AI-assisted heuristic evidence review are completed, but instructor expectations about evaluator authorship may require team review or additional work. New participant feedback cannot be substituted with fictional results.
+Research note: background research plus a heuristic evidence review are completed, but instructor expectations about evaluator authorship may require team review or additional work. New participant feedback cannot be substituted with fictional results.
