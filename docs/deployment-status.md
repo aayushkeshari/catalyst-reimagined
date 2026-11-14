@@ -8,6 +8,7 @@ Updated November 14, 2026. The working prototype and case study are publicly hos
 | Case study | [Open the case study](https://aayushkeshari.github.io/catalyst-reimagined/#/case-study) |
 | Source | [aayushkeshari/catalyst-reimagined](https://github.com/aayushkeshari/catalyst-reimagined) |
 | Audience | Public |
+| Portfolio entry | [Aayush’s portfolio](https://aayushkeshari.github.io/) → Projects → Catalyst, reimagined → Read the UI/UX case study |
 | Deployment workflow | `.github/workflows/deploy.yml`: syntax checks, 26 behavioral tests, production build, Pages deployment |
 | Feedback iteration | Eleven items mapped to completed revisions, retained behavior, or clarified limitations; see [feedback-revisions.md](feedback-revisions.md) |
 | Screenshot gallery | Fifteen current screenshots using the red/black interface and Aayush demo profile, including filters, personal targets, feedback revisions, and 375px mobile views |
@@ -19,4 +20,4 @@ The original `nightfury3128/UI-catalyst` repository is unchanged. Publication us
 
 ## Remaining submission work
 
-Publication and the feedback-driven implementation are complete. Remaining work is portfolio linking, team review and assignment presentation/submission, confirmation of prior checkpoint delivery, and participant retesting of the revised workflow. No measured before/after results are claimed. Review or replace the earlier captured-state video if the instructor requires a current live recording with team-member narration.
+Publication and the feedback-driven implementation are complete. The expanded case study is linked from Aayush’s portfolio. Remaining work is team review and assignment presentation/submission, confirmation of prior checkpoint delivery, and participant retesting of the revised workflow. No measured before/after results are claimed. Review or replace the earlier captured-state video if the instructor requires a current live recording with team-member narration.

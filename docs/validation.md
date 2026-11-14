@@ -55,3 +55,13 @@ Added prerequisite names, time and campus-day filters, clearer waitlist limits, 
 - Start-after 13:00, end-before 16:00, and campus-day filtering produced three matching sections. Personal targets displayed Today, Upcoming, and Overdue for the example dates.
 - At 375px, Home, confirmed schedule, and class search had a document width of 375px. The two visible Add to cart section actions measured 44px high. The schedule displayed its agenda and expanded filters stacked vertically.
 - Visually inspected refreshed captures. These are developer viewport checks, not a physical-device, screen-reader, or participant retest. The existing MP4 still contains earlier captured states.
+
+## Expanded public documentation and portfolio — November 14, 2026
+
+- Production Svelte build passed without compiler warnings. The portfolio page TSX syntax transform passed; its change adds the Catalyst project and a visible case-study link to the existing project collection.
+- Public GitHub Actions run 43651012922 completed successfully for the expanded documentation, including the existing checks, 26 tests, build, and deployment.
+- Verified the deployed case study contains eight heuristic findings, five linked Figma frames, eleven feedback responses, eight main sections, and fifteen screenshot figures with full-size links.
+- Section navigation to Interface moved focus to that section and positioned it approximately 24px below the viewport top.
+- At 1440px and 375px, document width matched viewport width. The 600px research table remained inside a horizontally scrollable 343px container at the mobile viewport, without page-wide overflow. Visually inspected the desktop and mobile hero/navigation.
+- Verified the live portfolio Projects window shows Catalyst, reimagined and the Read the UI/UX case study link targeting the public case-study URL. Preserved the existing projects and portfolio styling.
+- Local file preview was unavailable under browser protocol policy; layout checks used the published HTTPS application. No new participant retest, usability metric, or accessibility-conformance claim is added.

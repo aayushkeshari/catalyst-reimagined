@@ -8,7 +8,7 @@
 - [x] Error scenarios with recovery; reversible drop; responsive agenda.
 - [x] Background research with sources and explicit application.
 - [x] Heuristic evidence review with task-specific issues and severity.
-- [x] Portfolio-ready case-study route with design reasoning and implementation details.
+- [x] Public case study with project context, two research methods, eight heuristic findings, Figma frame mapping, six detailed interface walkthroughs, fifteen current screenshots with full-size links, implementation, future work, and source/app links.
 - [x] Prepared student feedback protocol and observation sheets.
 - [x] Demo recording script and timed final-presentation script.
 - [x] Automated behavioral checks and production build.
@@ -23,7 +23,7 @@
 - [ ] Team confirms this guided format satisfies the assignment, or records the live narration using docs/demo-script.md.
 - [x] Push source to aayushkeshari/catalyst-reimagined for Pages deployment.
 - [x] Configure public GitHub Pages deployment.
-- [ ] Link the case study from a group member’s portfolio.
+- [x] Link the expanded public case study from Aayush’s portfolio, under Projects → Catalyst, reimagined.
 - [ ] Confirm prior checkpoint and critique-presentation submissions.
 - [ ] Present for 5–6 minutes with every group member participating.
 
