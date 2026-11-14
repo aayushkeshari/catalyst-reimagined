@@ -113,6 +113,7 @@ In `src/lib/project.js`, update the repository URL after pushing and set `publis
 - [Think-aloud protocol](docs/study-protocol.md)
 - [Participant observation sheet](docs/participant-observations.csv)
 - [Feedback-to-change log](docs/feedback-log.csv)
+- [Implemented feedback revisions and verification](docs/feedback-revisions.md)
 - [Demo recording script](docs/demo-script.md)
 - [Final presentation speaker notes](docs/final-presentation.md)
 - [Eight-slide presentation](static/presentation.html)
@@ -129,8 +130,13 @@ In `src/lib/project.js`, update the repository URL after pushing and set `publis
 
 ## Current delivery status
 
-The production build and 21 domain tests pass. The prior native-browser walkthrough is preserved in docs/validation.md. This continuation also verified HTTP 200 from the local preview; fresh browser interaction was unavailable because the browser access host was down.
+The production build and 26 domain tests pass. The prior native-browser walkthrough is preserved in docs/validation.md. This continuation also verified HTTP 200 from the local preview; fresh browser interaction was unavailable because the browser access host was down.
 
 The captioned 2:54 guided walkthrough is embedded in the case study and available at static/demo.mp4. It uses synthetic narration over captured interface states, clearly disclosed in the video and page; it is not a live screen recording or participant study. Regenerate on macOS with `swift scripts/render-walkthrough.swift`.
 
-Published and verified at https://aayushkeshari.github.io/catalyst-reimagined/ on GitHub Pages. See docs/deployment-status.md for deployment details. Real participant feedback, team review, portfolio linking, and actual presentation/submission remain team tasks.
+Published and verified at https://aayushkeshari.github.io/catalyst-reimagined/ on GitHub Pages. See docs/deployment-status.md for deployment details. Follow-up student testing, team review, portfolio linking, and actual presentation/submission remain team tasks.
+
+
+## Feedback iteration
+
+The eleven feedback items in docs/feedback.md are mapped to implemented changes in docs/feedback-revisions.md and the public case study. Class filters now include inclusive meeting-time bounds and existing campus days. Prerequisites include names. Tasks support saved personal target dates and urgency, without inventing official deadlines. A Quick tour explains the new navigation; progress and waitlist messages clarify important limits. All 26 regression tests pass. Student retesting remains a separate next step.
