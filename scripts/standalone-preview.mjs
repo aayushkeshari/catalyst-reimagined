@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const html=fs.readFileSync('dist/index.html','utf8');
+const script=html.match(/<script[^>]+src="([^"]+)"[^>]*><\/script>/)?.[1];
+const css=html.match(/<link[^>]+href="([^"]+\.css)"[^>]*>/)?.[1];
+if(!script||!css)throw new Error('Expected one Vite JS bundle and one stylesheet');
+const js=fs.readFileSync('dist/'+script.replace(/^\.\//,''),'utf8').replaceAll('</script','<\\/script');
+const style=fs.readFileSync('dist/'+css.replace(/^\.\//,''),'utf8');
+const output=html.replace(/<script[^>]+src="[^"]+"[^>]*><\/script>/,'').replace(/<link[^>]+href="[^"]+\.css"[^>]*>/,`<style>${style}</style>`).replace('</body>',`<script type="module">${js}</script></body>`);
+fs.writeFileSync('dist/standalone.html',output);
+console.log('Created dist/standalone.html for server-free local review.');
