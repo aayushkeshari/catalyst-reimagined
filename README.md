@@ -90,24 +90,32 @@ tests/                     Domain behavior regression tests
 
 No backend or database is required. Stored records use `catalyst.demo.v2.<profile-id>`; clearing site data resets them. Corrupt or mismatched versions fall back to clean demo state. When storage cannot be written, the app displays a session-only notice.
 
-## Research and academic integrity
+## Public case study and portfolio
 
-Completed: source-based heuristic evidence review and background research using Nielsen's heuristics and W3C accessibility guidance. These are documented in the case study and `docs/`.
+- [Read the complete case study](https://aayushkeshari.github.io/catalyst-reimagined/#/case-study)
+- [Open the working application](https://aayushkeshari.github.io/catalyst-reimagined/)
+- [Aayush Keshari’s portfolio](https://aayushkeshari.github.io/) → Projects → Catalyst, reimagined
+- [Source repository](https://github.com/aayushkeshari/catalyst-reimagined)
 
-**Not completed:** new student interviews, participant think-aloud testing, measured before/after comparisons, or instructor feedback. The prepared study protocol and CSV sheets contain no fabricated results. Conduct those sessions and add the real observations before claiming participant validation.
+The case study introduces the problem for a first-time visitor, explains two research methods and eight specific heuristic findings, maps five Figma frames to design intent, and documents six interface walkthroughs with fifteen current screenshots. It includes the eleven feedback responses, code structure, testing, prototype boundaries, and prioritized future work. Screenshot links open full-size images; section links and a print control support reviewing the documentation.
 
-The original critique's class-reported Catalyst behavior is explicitly distinguished from verified source issues. This prototype is not an official degree audit and makes no WCAG compliance claim.
+The case-study source is versioned in `src/pages/CaseStudy.svelte`, with screenshot metadata in `src/lib/project.js` and images in `static/research/`. The repository is under Aayush’s account, so this copy does not depend on a teammate’s portfolio. See [documentation coverage](docs/documentation-coverage.md).
 
-## Publish
+## Research and evaluation
 
-The included GitHub Actions workflow runs checks, tests, and a static build, then deploys main to GitHub Pages. In your target repository, enable **Settings → Pages → Build and deployment → Source: GitHub Actions**. Push or merge this implementation into main. The Actions deployment reports the actual public URL; do not claim the URL is live before the deployment succeeds.
+Completed: background research using Nielsen’s heuristics and W3C guidance, a source/material heuristic evidence review, and an implementation iteration responding to eleven student feedback comments supplied by the project author. Findings distinguish original Catalyst screenshot/critique evidence from code-verifiable issues in the initial student prototype.
 
-Alternatively, deploy `dist/` to any static host. The portfolio case study is in the same app at `<deployed-url>/#/case-study`. Link that page from one group member's portfolio.
+A structured participant retest, measured before/after comparison, and formal accessibility audit remain future work. The prepared protocol and observation sheets do not contain task timings or SUS scores. The prototype is not an official degree audit and makes no WCAG conformance claim.
 
-In `src/lib/project.js`, update the repository URL after pushing and set `publishedUrl` to the verified deployment. Put the narrated 2–3 minute demo at `static/demo.mp4`, set `demoVideo` to `./demo.mp4`, add matching `static/demo-captions.vtt`, and rebuild. The recording script is in `docs/demo-script.md`.
+## Deployment
+
+The public app uses GitHub Pages. `.github/workflows/deploy.yml` runs syntax checks, 26 behavioral tests, and a production build before deployment from main. `src/lib/project.js` contains the public application, source, Figma, and demo links. Hash-based routes work without server rewrite rules. To use another static host, build and deploy the complete `dist/` directory.
+
+The previous generated video and captions have been removed from the public build. Aayush will record the replacement. [Recording script and Mac instructions](docs/demo-script.md) provide a timed 2:50 walkthrough of the current interface. The video requirement is pending until that recording is linked.
 
 ## Assignment materials
 
+- [Documentation coverage and public links](docs/documentation-coverage.md)
 - [Research and source limitations](docs/research.md)
 - [Heuristic review](docs/heuristic-evaluation.md)
 - [Think-aloud protocol](docs/study-protocol.md)
@@ -130,11 +138,11 @@ In `src/lib/project.js`, update the repository URL after pushing and set `publis
 
 ## Current delivery status
 
-The production build and 26 domain tests pass. The prior native-browser walkthrough is preserved in docs/validation.md. This continuation also verified HTTP 200 from the local preview; fresh browser interaction was unavailable because the browser access host was down.
+The production build and 26 domain tests pass. Browser checks and the current 1440px/375px screenshot refresh are recorded in docs/validation.md. The expanded case study includes eight heuristic findings, six illustrated walkthroughs, full-size screenshot links, implementation details, and future work.
 
-The captioned 2:54 guided walkthrough is embedded in the case study and available at static/demo.mp4. It uses synthetic narration over captured interface states, clearly disclosed in the video and page; it is not a live screen recording or participant study. Regenerate on macOS with `swift scripts/render-walkthrough.swift`.
+The old video has been removed. The timed script in docs/demo-script.md is ready for Aayush's own recording; no finished replacement is claimed.
 
-Published and verified at https://aayushkeshari.github.io/catalyst-reimagined/ on GitHub Pages. See docs/deployment-status.md for deployment details. Follow-up student testing, team review, portfolio linking, and actual presentation/submission remain team tasks.
+Published and verified at https://aayushkeshari.github.io/catalyst-reimagined/ on GitHub Pages. See docs/deployment-status.md for deployment details. The case study is linked from the Catalyst entry in Aayush’s portfolio. Follow-up student testing, team review, and actual presentation/submission remain team tasks.
 
 
 ## Feedback iteration

@@ -13,14 +13,14 @@ Updated November 14, 2026. The Svelte 5 + Vite prototype, source repository, and
 - Feedback revisions: prerequisite names, time and campus-day filters, larger mobile section actions, waitlist limitations, personal target dates and urgency, credit assumptions, transfer-credit guidance, platform-aware shortcuts, and an optional Quick tour.
 - Public GitHub Pages deployment and automated syntax checks, 26 behavioral tests, and production build.
 - Fifteen current interface screenshots in the case study: ten replaced images plus five additional views covering filters, personal targets, the tour, feedback revisions, and mobile filters. Original Catalyst baseline preserved.
-- A 2:54 captioned guided walkthrough embedded in the case study. It uses synthetic narration over earlier captured interface states; it is not a current live recording.
+- A current 2:50 live-demo script and Mac recording instructions in [demo-script.md](docs/demo-script.md). The previous generated video has been removed.
 
 - Expanded public case study with eight heuristic findings, six illustrated walkthroughs, code structure, and prioritized future work; linked from [Aayush’s portfolio](https://aayushkeshari.github.io/) under Projects → Catalyst, reimagined.
 
 ## Remaining external/submission work
 
 - Retest the revised workflow with students and record actual observations. The prepared performance-study sheets have no collected task timings or before/after scores.
-- Review the existing video against the instructor's voiceover/demo expectations; replace it with a current, team-narrated live walkthrough if needed. Its earlier theme/profile and lack of the latest controls are disclosed.
+- Record a 2–3 minute live walkthrough with Aayush’s voice, add/review captions, and link the replacement publicly from the case study.
 - Complete team review, deliver the final presentation, and submit the required links/materials.
 - Confirm the initial UI checkpoint and midway critique presentation were submitted, and retain evidence. Confirm the instructor accepts the documented research methods.
 
