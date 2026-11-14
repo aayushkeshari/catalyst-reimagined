@@ -65,3 +65,7 @@ Added prerequisite names, time and campus-day filters, clearer waitlist limits, 
 - At 1440px and 375px, document width matched viewport width. The 600px research table remained inside a horizontally scrollable 343px container at the mobile viewport, without page-wide overflow. Visually inspected the desktop and mobile hero/navigation.
 - Verified the live portfolio Projects window shows Catalyst, reimagined and the Read the UI/UX case study link targeting the public case-study URL. Preserved the existing projects and portfolio styling.
 - Local file preview was unavailable under browser protocol policy; layout checks used the published HTTPS application. No new participant retest, usability metric, or accessibility-conformance claim is added.
+
+## Video removal and recording handoff — November 14, 2026
+
+At the project author's request, removed the generated MP4, its captions, and the case-study video player. Cleared the configured video URL. Earlier video-export entries above are historical records, not the current publication state. The replacement recording is pending. Updated docs/demo-script.md for the Aayush profile and current controls, with a 2:50 action/voiceover sequence, microphone setup, trimming, and delivery instructions.

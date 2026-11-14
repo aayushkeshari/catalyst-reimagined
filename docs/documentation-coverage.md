@@ -25,4 +25,4 @@ The public case study is the documentation intended for first-time readers and U
 
 ## Evidence boundaries
 
-Background research and heuristic review support specific design decisions. Eleven student feedback comments supplied by the project author informed a subsequent iteration. Developer tests and browser checks verify implementation behavior. No collected task timings, SUS scores, structured participant retest, or measured usability improvement are claimed. The earlier guided MP4 remains disclosed separately from current screenshots.
+Background research and heuristic review support specific design decisions. Eleven student feedback comments supplied by the project author informed a subsequent iteration. Developer tests and browser checks verify implementation behavior. No collected task timings, SUS scores, structured participant retest, or measured usability improvement are claimed. The earlier generated MP4 has been removed; a replacement live recording by Aayush is pending, with a timed script and instructions in demo-script.md.

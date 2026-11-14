@@ -19,8 +19,8 @@
 - [ ] Team reviews the analysis, code, and materials before submission.
 - [x] Record the supplied feedback and document implementation responses in docs/feedback-revisions.md.
 - [ ] Retest the revised controls with students and record follow-up findings.
-- [x] Export and embed a captioned 2:54 guided demo with disclosed synthetic narration over captured interface states.
-- [ ] Team confirms this guided format satisfies the assignment, or records the live narration using docs/demo-script.md.
+- [x] Remove the previous generated video and prepare a current timed recording script.
+- [ ] Aayush records a 2–3 minute live demo with voiceover, reviews captions, and links the replacement from the case study.
 - [x] Push source to aayushkeshari/catalyst-reimagined for Pages deployment.
 - [x] Configure public GitHub Pages deployment.
 - [x] Link the expanded public case study from Aayush’s portfolio, under Projects → Catalyst, reimagined.

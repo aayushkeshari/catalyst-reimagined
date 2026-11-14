@@ -1,49 +1,93 @@
-# Narrated live demo — target 2 minutes 30 seconds
+# Catalyst live demo — recording script and instructions
 
-Status: live-recording script retained for team use. A separate 2:54 captioned guided video is now exported and embedded; it uses disclosed synthetic narration over captured states. Rehearse once before capturing. Use the Arthur demo account, reset it, select Spring 2027, close unrelated tabs, and record only the app. Keep the pointer still while explaining. Record narration yourself or clearly identify any synthetic narration; do not imply a generated voice is your own recording.
+Target length: **2 minutes 50 seconds** (stay between 2 and 3 minutes). Presenter: **Aayush Keshari**. Project team: Aayush Keshari, Nipun Chandra, and Shivam Kharangate.
 
-## 0:00–0:18 — Home
+The previous generated video has been removed. Record the current public application with your own voice. The timings are rehearsal targets; leave a moment after each click so the result is visible.
 
-“This is Catalyst, reimagined, a student portal redesign by Aayush Keshari, Nipun Chandra, and Shivam Kharangate. Our focus is class discovery and enrollment confidence. The dashboard brings academic progress, essential tasks, and the current schedule into one clear workspace. All records here are synthetic demo data.”
+## Before recording
 
-Action: show Home, then open Classes & schedule.
+1. Open https://aayushkeshari.github.io/catalyst-reimagined/ in Brave. Use a desktop window at least 1280px wide, with browser zoom at 100% and the light theme.
+2. Select **Aayush Keshari** in the profile menu. Use the footer's **Reset demo → Reset this profile**. This clears this demo profile's saved cart, enrollment, filters, and personal targets in this browser.
+3. Open **Classes & schedule**, choose **Spring 2027**, and confirm the cart and spring schedule are empty. Return to Home before starting.
+4. Rehearse the seven scenes below once. Know where CS5002 sections 001 and CS5167 sections 001/002 appear. Use the main search to reach them quickly.
+5. Hide unrelated tabs and notifications. Keep the script on a phone or another screen. Do a 10-second microphone test and play it back.
 
-## 0:18–0:43 — Search and compare
+## 0:00–0:20 — Introduce the project
 
-“Instead of moving among separate tools, I can search, inspect sections, and compare options in one place. Search accepts a course code, title, or instructor. The filters cover the choices students usually need, such as day, format, and open seats. My search context stays available when I return.”
+**Show:** Home. Point briefly to essentials and the current schedule; then open Classes & schedule.
 
-Action: search CS5167; choose Compare on sections 001 and 002; open the comparison; close it. Clear the search.
+**Say:**
 
-## 0:43–1:10 — Cart and recovery
+> Hi, I’m Aayush Keshari. This is Catalyst, reimagined, a student-portal redesign created with Nipun Chandra and Shivam Kharangate. We focused on clearer class planning, enrollment, and academic progress. Home brings essential actions and the current schedule together. All student records are demo data.
 
-“I’ll add Senior Design II section 001 and UI Design section 001 to my spring cart. The cart explicitly says these seats are not reserved. These sections overlap. The message names the conflicting class and explains what to do next, so I can choose the Tuesday–Thursday UI section instead.”
+## 0:20–0:50 — Find and compare classes
 
-Action: add CS5002-001 and CS5167-001, open cart, show errors. Remove CS5167-001; find CS5167-002 and add it. Return to cart.
+**Do:** Confirm Spring 2027. Search **CS5167**. Open **Filters**; set **Starts at or after** to **1:00 PM / 13:00**, showing section 002. Select **Reset filters**, re-enter **CS5167** in search, and close Filters. Check **Compare** for sections **001** and **002**, then choose **Compare sections**. Pause on the comparison and close it.
 
-## 1:10–1:37 — Review and confirmation
+**Say:**
 
-“Before registration, I review the complete selection. The prototype checks prerequisites, availability, duplicate classes, time conflicts, registration status, and the credit limit. A blocking issue leaves the whole transaction unchanged. When everything is ready, confirmation creates a receipt and updates my schedule. This is the point at which I’m enrolled in the demo.”
+> Classes and schedule keeps discovery in one workspace. I can search by course, title, or instructor and filter around meeting times. Prerequisites include course names. Here, I’m comparing two UI Design sections before choosing. Adding a section to my cart saves a plan; it does not reserve a seat.
 
-Action: Review & enroll → Confirm enrollment → show receipt → View schedule.
+## 0:50–1:25 — Show an error and recover
 
-## 1:37–1:58 — Schedule and reversible actions
+**Do:** Add **CS5167 section 001**. Search **CS5002** and add **section 001**. Open **Enrollment cart → Review & enroll**. Pause on the named conflict and disabled Confirm enrollment button. Choose **Back to cart**. Remove **CS5167 section 001**. Choose **Find classes**, search CS5167, add **section 002**, then reopen Enrollment cart.
 
-“The confirmed schedule has week and list views, and I can export it to a calendar. On a phone, the schedule automatically becomes an agenda so meeting information stays available. Dropping a class requires confirmation and offers an immediate undo. Waitlisting is labeled separately and does not imply enrollment.”
+**Say:**
 
-Action: switch Week/List; drop one spring class and immediately Undo. If time permits, briefly show mobile layout.
+> I’ve chosen two sections that overlap. Review names the conflict and blocks confirmation, so no partial enrollment occurs. I can return to my cart and replace the conflicting UI Design section with the Tuesday–Thursday alternative. The interface explains both what went wrong and how I can continue.
 
-## 1:58–2:19 — Progress and support
+## 1:25–1:50 — Confirm and inspect the schedule
 
-“Academic progress separates earned credits from courses still in progress and future enrollment. The transcript and graduation checklist are available here, with a readable summary download. Academic services collects records, planning, advising, and official support links.”
+**Do:** Select **Review & enroll → Confirm enrollment**. Hold on the receipt for about three seconds, then select **View schedule**. Briefly switch Week to List if time allows.
 
-Action: show Progress; open Services.
+**Say:**
 
-## 2:19–2:35 — Evidence and limits
+> Now the selection passes the prototype’s checks. Confirming creates a dated receipt with the exact sections. My schedule updates to two confirmed classes and six credits. That receipt makes the difference between planning and enrollment explicit. The schedule also offers list and week views and calendar export.
 
-“The case study explains the critique, background research, heuristic evidence, design decisions, and implementation. Participant testing remains the next step: the project includes a prepared study protocol and honest empty observation sheets. This working front end demonstrates the redesign without connecting to real university systems.”
+## 1:50–2:15 — Explain academic progress
 
-Action: open Case study and stop recording.
+**Do:** Open **Academic progress**. Point to earned credits, current in-progress credits, and the remaining-credit explanation. Optionally expand the transfer-credit guidance; do not scroll through the entire transcript.
 
-## Export
+**Say:**
 
-Export 1080p MP4, 2–3 minutes. Add captions and place the result at static/demo.mp4; set demoVideo in src/lib/project.js to ./demo.mp4 and rebuild. Link the actual deployed case-study URL from a group member’s portfolio.
+> Academic progress separates earned credits from coursework still underway. This demo has ninety-six earned credits and fifteen in progress. The fifteen remaining after this term assumes those current courses are passed; thirty credits are not yet earned. The page also provides coursework, a transcript, and graduation planning.
+
+## 2:15–2:32 — Show personal target dates
+
+**Do:** Open **Tasks & reminders**. Set the personal target for **Build your spring schedule** to today's actual date. Click outside the date field and pause on **Today**. Do not use a fixed historical date.
+
+**Say:**
+
+> Tasks lets students set personal target dates and see urgency labels such as Today or Overdue. These dates stay with the demo profile in this browser. They are personal reminders, not official university deadlines.
+
+## 2:32–2:50 — Support and closing
+
+**Do:** Open **Academic services**, briefly show the search/categories, then choose **About this redesign**. End on the case-study title and public app/source links.
+
+**Say:**
+
+> Academic services groups advising, records, and planning resources. Our case study explains the research, student feedback, design decisions, and implementation in Svelte and JavaScript. The source code and working application are publicly linked. Next, we would test the revised workflow with students and refine it from their observations.
+
+## Record on your Mac
+
+1. Press **Shift–Command–5** and choose **Record Selected Portion**. Frame the browser's application area, including navigation; keep the text legible.
+2. Under **Options**, select your microphone, choose a save location, and optionally set a five-second timer. Record your own voice while performing the scenes.
+3. Click **Record**. Keep the pointer still when explaining and pause briefly on the conflict, receipt, and credit totals.
+4. Stop with the menu-bar Stop button or **Command–Control–Esc**.
+5. Open the recording in QuickTime Player. Use **Edit → Trim** to remove the setup and ending. Watch the complete recording with sound; confirm a final duration of 2–3 minutes.
+
+Apple instructions: https://support.apple.com/en-us/102618
+
+## Deliver the replacement
+
+- Easiest: upload the finished recording to YouTube as **Public** or **Unlisted**, enable/review captions, and send the watch URL so it can be embedded in the case study. An unlisted video must play for anyone with the link without requiring your account.
+- Alternatively, provide an actual **MP4** and optional matching **WebVTT captions**. QuickTime may save a **MOV**; do not change its extension to pretend it is an MP4. YouTube accepts a MOV upload.
+- Keep the existing case-study and app URLs. The video requirement remains pending until your replacement is linked and plays publicly.
+
+## Final check
+
+- Project title, your name, and team attribution are audible.
+- The recording shows real interface interactions: search/comparison, conflict recovery, enrollment receipt, progress, and personal targets.
+- The microphone is clear, controls are readable, and clicks follow the narration.
+- There is no invented testing outcome or claim of real UC enrollment.
+- It ends between 2:00 and 3:00 and the final link works for a signed-out visitor.
