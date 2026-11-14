@@ -15,11 +15,12 @@ Updated November 14, 2026. The Svelte 5 + Vite prototype, source repository, and
 - Fifteen current interface screenshots in the case study: ten replaced images plus five additional views covering filters, personal targets, the tour, feedback revisions, and mobile filters. Original Catalyst baseline preserved.
 - A 2:54 captioned guided walkthrough embedded in the case study. It uses synthetic narration over earlier captured interface states; it is not a current live recording.
 
+- Expanded public case study with eight heuristic findings, six illustrated walkthroughs, code structure, and prioritized future work; linked from [Aayush’s portfolio](https://aayushkeshari.github.io/) under Projects → Catalyst, reimagined.
+
 ## Remaining external/submission work
 
 - Retest the revised workflow with students and record actual observations. The prepared performance-study sheets have no collected task timings or before/after scores.
 - Review the existing video against the instructor's voiceover/demo expectations; replace it with a current, team-narrated live walkthrough if needed. Its earlier theme/profile and lack of the latest controls are disclosed.
-- Link the public case study from at least one group member's portfolio page.
 - Complete team review, deliver the final presentation, and submit the required links/materials.
 - Confirm the initial UI checkpoint and midway critique presentation were submitted, and retain evidence. Confirm the instructor accepts the documented research methods.
 
