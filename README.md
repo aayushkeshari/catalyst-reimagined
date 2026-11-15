@@ -139,12 +139,3 @@ The eleven feedback items in docs/feedback.md are mapped to implemented changes 
 
 The expanded academic area restores the five original sections and 31 destinations, with shared desktop/mobile navigation, local record and planning workflows, and verified links for official university services. See [academic coverage and verification](docs/academic-hierarchy.md).
 
-## Academic requirements
-
-The primary student’s academic views share the 45 course rows transcribed from the supplied My Academic Requirements screenshots. Grades, course history, progress, requirement details, graduation planning, and HTML/CSV exports use this source. The audit preserves 37 requirement groups, applied substitutions, fractional transfer credits, pass grades, unused coursework, current classes, and planned future work.
-
-The report lists 125 required hours and 133.01 taken. Visible course rows total 110.01 completed, 16 current, and 3 planned credits; the report total is retained separately rather than filling gaps with invented courses. The cumulative GPA of 3.673 follows the supplied academic profile; term GPA uses graded completed coursework and excludes P and TA grades. ESL1011’s 0.99 applied and 0.01 unused credits remain one 1.00-credit transcript entry.
-
-User-facing labels, metadata, notifications, exports, and case-study images use normal workspace terminology. Existing browser storage keys are retained for compatibility with saved work.
-
-All 45 supplied course codes also appear in Classes & schedule, bringing the catalog to 50 unique courses including the existing offerings. Every course has section 001; 23 courses offer additional sections, for 74 sections total. Assigned meeting times, rooms, seats, and prerequisites feed search, comparison, cart review, enrollment, schedule export, and swap validation. Earlier saved planning entries migrate to section 001 while staying in the cart. STAT2037 uses 3 course credit hours while its 2.01 applied transfer credits stay in the academic record.
