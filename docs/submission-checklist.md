@@ -10,7 +10,7 @@
 - [x] Heuristic evidence review with task-specific issues and severity.
 - [x] Public case study with project context, two research methods, eight heuristic findings, Figma frame mapping, six detailed interface walkthroughs, fifteen current screenshots with full-size links, implementation, future work, and source/app links.
 - [x] Prepared student feedback protocol and observation sheets.
-- [x] Demo recording script and timed final-presentation script.
+- [x] Timed final-presentation script.
 - [x] Automated behavioral checks and production build.
 - [x] GitHub Pages deployment workflow.
 
@@ -19,8 +19,10 @@
 - [ ] Team reviews the analysis, code, and materials before submission.
 - [x] Record the supplied feedback and document implementation responses in docs/feedback-revisions.md.
 - [ ] Retest the revised controls with students and record follow-up findings.
-- [x] Remove the previous generated video and prepare a current timed recording script.
-- [ ] Aayush records a 2–3 minute live demo with voiceover, reviews captions, and links the replacement from the case study.
+- [x] Remove the previous generated video.
+- [x] Aayush records and uploads the full walkthrough: https://youtu.be/yZYuDvyQYdc (10:59).
+- [x] Publish the approved video embed, direct watch link, and Video shortcut in the case study.
+- [ ] Review the uploaded recording’s captions and final playback.
 - [x] Push source to aayushkeshari/catalyst-reimagined for Pages deployment.
 - [x] Configure public GitHub Pages deployment.
 - [x] Link the expanded public case study from Aayush’s portfolio, under Projects → Catalyst, reimagined.
