@@ -1,6 +1,6 @@
 # My Finances and My Profile coverage
 
-Prepared November 15, 2026. This revision is approved locally for commit; publication is pending.
+Prepared November 15, 2026. This revision is approved for publication through the GitHub Pages workflow.
 
 The supplied original UC Catalyst screenshots define the hierarchy below. The prototype preserves these groups while applying the existing dark red design. Financial amounts, identifiers, addresses, and account details are synthetic. Aayush explicitly supplied his campus email for inclusion; other contact entries are examples. Private values from the reference screenshots were not copied.
 

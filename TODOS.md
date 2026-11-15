@@ -12,7 +12,7 @@ Updated November 15, 2026. The Svelte 5 + Vite prototype, source repository, and
 - Eleven feedback items documented and mapped to implemented, retained, or clarified responses in [feedback-revisions.md](docs/feedback-revisions.md).
 - Feedback revisions: prerequisite names, time and campus-day filters, larger mobile section actions, waitlist limitations, personal target dates and urgency, credit assumptions, transfer-credit guidance, platform-aware shortcuts, and an optional Quick tour.
 - Public GitHub Pages deployment and automated syntax checks, 44 behavioral tests, and production build.
-- Twenty-two interface screenshots: the initial fifteen, three academic hierarchy views, and four finance/profile views. The latest four are prepared locally for publication.
+- Twenty-two interface screenshots: the initial fifteen, three academic hierarchy views, and four finance/profile views. The latest four cover the expanded finance/profile workflows.
 - Aayush’s recorded walkthrough is uploaded to [YouTube](https://youtu.be/yZYuDvyQYdc), duration 10:59. The previous generated video remains removed. The case study includes the responsive embed and a direct watch link.
 
 - Expanded public case study with eight heuristic findings, six illustrated walkthroughs, code structure, and prioritized future work; linked from [Aayush’s portfolio](https://aayushkeshari.github.io/) under Projects → Catalyst, reimagined.
@@ -26,9 +26,9 @@ Updated November 15, 2026. The Svelte 5 + Vite prototype, source repository, and
 
 See [submission-checklist.md](docs/submission-checklist.md) for the assignment mapping. Developer checks establish implementation behavior; they do not establish measured usability improvements.
 
-## Current local revision
+## Finance and profile revision
 
 - Finance overview and all four original section groups; itemized sample bill, aid decisions, insurance checklist, and official service links.
 - All six profile sections with editable sample details, preferred contacts, address types, emergency contacts, privacy drafts, and scoped sharing drafts.
 - Contextual desktop/mobile navigation and portal search for the expanded destinations.
-- Implementation and documentation are approved locally for commit; publication is pending. See [coverage](docs/finance-profile-hierarchy.md).
+- Implementation and documentation are approved for publication through the GitHub Pages workflow. See [coverage](docs/finance-profile-hierarchy.md).
