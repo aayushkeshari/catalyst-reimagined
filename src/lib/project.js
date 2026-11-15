@@ -8,6 +8,12 @@ export const project = {
   demoDuration: '10:59',
   publishedUrl: 'https://aayushkeshari.github.io/catalyst-reimagined/',
   screenshots: [
+    {src:'./research/tasks-indicators.jpg',alt:'Tasks with Service Indicators and To Do List counts, a separate Personal Reminders view, and departmental details.',caption:'Tasks preserves the original hierarchy while separating official-style sample items from personal reminders.'},
+    {src:'./research/admissions-overview.jpg',alt:'My Admissions showing all six original groups and their child destinations.',caption:'Admission information, getting started, housing, law, orientation, and international support retain their reference grouping.'},
+    {src:'./research/admissions-what-if.jpg',alt:'A sample what-if scenario with matching courses, remaining requirements, and a saved report.',caption:'The same saved scenario can be reopened from My Admissions or Academic Progress without changing the active degree.'},
+    {src:'./research/other-tools.jpg',alt:'All fourteen original Other Tools tiles with local SVG icons, categories, search, and save controls.',caption:'The tools directory keeps familiar names and adds filtering and per-student favorites.'},
+    {src:'./research/quick-links-contacts.jpg',alt:'Quick Links with eight common actions, campus office and helpful contact groups, and VA certification guidance.',caption:'Shared shortcuts reuse existing workflows and office pages expose official contact resources.'},
+    {src:'./research/mobile-helpful-contact.jpg',alt:'A 375-pixel helpful-contact page with the IT service desk resource and phone link.',caption:'The narrow layout retains contact information and official support actions without horizontal page scrolling.'},
     {src:'./research/finances-overview.jpg',alt:'My Finances with Account Summary beside Financial Aid Awards and Tuition Guarantee, followed by the original four section groups.',caption:'Finances keeps the reference hierarchy with a consistent dark red design and clearly labeled sample amounts.'},
     {src:'./research/financial-aid-draft.jpg',alt:'Sample financial aid decisions with a declined merit award and accepted college award.',caption:'Saving a local award decision updates the accepted draft total without altering posted account credits.'},
     {src:'./research/profile-contact.jpg',alt:'Editable sample email and phone records with a preferred home email.',caption:'Contact controls support adding, editing, removal, and a single preferred contact per channel.'},

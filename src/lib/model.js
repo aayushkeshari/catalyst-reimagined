@@ -4,11 +4,13 @@ import { emptyAcademicState, hydrateAcademics } from './academics.js';
 
 import { emptyPerson,emptyFinance,hydratePerson,hydrateFinance } from './student-account.js';
 
+import { emptyWorkspace,hydrateWorkspace } from './workspace-directory.js';
+
 export { isPassingGrade };
 export const SCHEMA_VERSION = 2;
 export const CREDIT_LIMIT = 18;
 export function createState(profile) {
-  return { version: SCHEMA_VERSION, userId: profile.id, termId: 'spring-2027', enrolledByTerm: { 'fall-2026': initialSchedule(profile), 'spring-2027': [] }, cartByTerm: {}, waitlistByTerm: {}, receipts: [], completedTasks: [], taskDates: {}, savedScholarships: [], preferences: { reminders: true, compactSchedule: false }, searchByTerm: {}, reviewChecklist: [], academics: emptyAcademicState(), person:emptyPerson(profile), finance:emptyFinance() };
+  return { version: SCHEMA_VERSION, userId: profile.id, termId: 'spring-2027', enrolledByTerm: { 'fall-2026': initialSchedule(profile), 'spring-2027': [] }, cartByTerm: {}, waitlistByTerm: {}, receipts: [], completedTasks: [], taskDates: {}, savedScholarships: [], preferences: { reminders: true, compactSchedule: false }, searchByTerm: {}, reviewChecklist: [], academics: emptyAcademicState(), person:emptyPerson(profile), finance:emptyFinance(), workspace:emptyWorkspace() };
 }
 export function hydrateState(raw, profile) {
   const fallback = createState(profile);
@@ -16,7 +18,7 @@ export function hydrateState(raw, profile) {
   const known = new Set(SECTIONS.map(s => s.id));
   const cleanIds = list => Array.isArray(list) ? [...new Set(list.filter(id => known.has(id)))] : [];
   const enrolled = Array.isArray(raw.enrolledByTerm?.['spring-2027']) ? raw.enrolledByTerm['spring-2027'].map(s => sectionById(s?.id)).filter(Boolean) : [];
-  return { ...fallback, person:hydratePerson(raw.person,profile),finance:hydrateFinance(raw.finance),academics: hydrateAcademics(raw.academics,profile), termId: TERMS.some(t => t.id === raw.termId) ? raw.termId : fallback.termId,
+  return { ...fallback, workspace:hydrateWorkspace(raw.workspace),person:hydratePerson(raw.person,profile),finance:hydrateFinance(raw.finance),academics: hydrateAcademics(raw.academics,profile), termId: TERMS.some(t => t.id === raw.termId) ? raw.termId : fallback.termId,
     enrolledByTerm: { ...fallback.enrolledByTerm, 'spring-2027': [...new Map(enrolled.map(s => [s.code,s])).values()] },
     cartByTerm: { 'spring-2027': cleanIds(raw.cartByTerm?.['spring-2027']) }, waitlistByTerm: { 'spring-2027': cleanIds(raw.waitlistByTerm?.['spring-2027']) },
     receipts: Array.isArray(raw.receipts) ? raw.receipts.filter(r=>r && typeof r.id==='string' && TERMS.some(t=>t.id===r.termId) && typeof r.timestamp==='string' && Number.isFinite(Date.parse(r.timestamp)) && Array.isArray(r.courses) && r.courses.every(c=>c && typeof c.code==='string' && typeof c.title==='string' && typeof c.section==='string' && Number.isFinite(c.credits))).slice(0,30) : [], completedTasks: Array.isArray(raw.completedTasks) ? raw.completedTasks.filter(x => typeof x === 'string') : [],

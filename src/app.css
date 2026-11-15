@@ -266,3 +266,16 @@ dialog{background:var(--surface);color:var(--ink);border:1px solid var(--line);b
 @media(max-width:600px){.account-directory{grid-template-columns:1fr}.account-balance{font-size:42px}.account-record{align-items:flex-start;flex-direction:column;gap:12px}.account-record .button-row{width:100%;flex-wrap:wrap}.profile-section-tabs{gap:7px}.profile-section-tabs>a{padding:11px 10px;font-size:11px}.profile-identity{padding:20px;gap:14px}.profile-identity h2{font-size:23px}.account-disclosure>summary{flex-wrap:wrap}.account-disclosure>summary>.badge{margin-left:0;font-size:9px}.account-overview-grid .academic-panel-title h2{font-size:15px}}
 
 .account-award.declined svg{color:var(--muted)}
+
+/* Admissions, tasks, tools, and contact resources share the workspace hierarchy. */
+.workspace-tools-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.workspace-resource-card{min-height:290px}.workspace-resource-card h2{font-size:25px;overflow-wrap:anywhere}.workspace-resource-card .button-row{flex-wrap:wrap}
+.directory-controls{margin-top:6px}.directory-description{display:block;color:var(--muted);font-size:10px;line-height:1.8;margin-top:4px;max-width:95%}
+.quick-action-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin-top:16px}.quick-action{display:flex;align-items:center;gap:14px;padding:22px 0;border-bottom:1px solid var(--line);font-size:13px}.quick-action>span:nth-child(2){flex:1;min-width:0}.quick-action small{display:block;color:var(--muted);font-size:11px;line-height:1.8;margin-top:5px}
+.quick-va-link{display:flex;align-items:center;gap:16px;padding:24px}.quick-va-link>div{flex:1}.workspace-detail-heading{display:flex;align-items:center;gap:18px}.workspace-detail-heading>div{flex:1;min-width:0}.workspace-detail-heading h2{font-size:30px}.workspace-detail-heading p{margin-top:7px;line-height:1.8}.workspace-detail-heading h2,.quick-va-link strong{overflow-wrap:anywhere}
+.sample-letter{font:12px/1.9 ui-monospace,SFMono-Regular,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--surface-soft);border:1px solid var(--line);padding:22px;border-radius:6px;color:var(--ink)}
+.workspace-resource-card .eyebrow{font-size:9px}.workspace-resource-card .button-row{gap:8px}.workspace-resource-card .button-row .icon-button[aria-pressed=true]{color:var(--accent);background:var(--accent-soft)}
+@media(max-width:1250px){.workspace-tools-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1100px){.workspace-tools-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.workspace-tools-grid,.quick-action-grid{grid-template-columns:1fr}.workspace-resource-card{min-height:240px}.workspace-detail-heading{gap:12px;flex-wrap:wrap}.workspace-detail-heading h2{font-size:25px}.workspace-detail-heading>.tile-icon{display:none}.workspace-detail-heading>.icon-button{align-self:flex-start}.directory-controls>.button{min-height:44px}.quick-action{padding:18px 0}.sample-letter{font-size:10px;padding:14px}.quick-va-link{padding:20px}.quick-va-link strong{font-size:13px}.workspace-resource-card h2{font-size:27px}}
+.section-nav-count{display:inline-flex;align-items:center;justify-content:center;min-width:19px;min-height:19px;margin-left:8px;padding:0 4px;border:1px solid currentColor;border-radius:20px;font-size:9px}

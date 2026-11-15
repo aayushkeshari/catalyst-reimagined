@@ -11,8 +11,8 @@ Updated November 15, 2026. The Svelte 5 + Vite prototype, source repository, and
 - Background research, heuristic evidence review, Figma reference, study protocol and observation templates, final presentation and speaker notes.
 - Eleven feedback items documented and mapped to implemented, retained, or clarified responses in [feedback-revisions.md](docs/feedback-revisions.md).
 - Feedback revisions: prerequisite names, time and campus-day filters, larger mobile section actions, waitlist limitations, personal target dates and urgency, credit assumptions, transfer-credit guidance, platform-aware shortcuts, and an optional Quick tour.
-- Public GitHub Pages deployment and automated syntax checks, 44 behavioral tests, and production build.
-- Twenty-two interface screenshots: the initial fifteen, three academic hierarchy views, and four finance/profile views. The latest four cover the expanded finance/profile workflows.
+- Public GitHub Pages deployment and automated syntax checks, 52 behavioral tests, and production build.
+- Twenty-eight interface screenshots: the initial fifteen, three academic hierarchy views, four finance/profile views, and six new student-services views. The newest six document the completed student-services expansion.
 - Aayush’s recorded walkthrough is uploaded to [YouTube](https://youtu.be/yZYuDvyQYdc), duration 10:59. The previous generated video remains removed. The case study includes the responsive embed and a direct watch link.
 
 - Expanded public case study with eight heuristic findings, six illustrated walkthroughs, code structure, and prioritized future work; linked from [Aayush’s portfolio](https://aayushkeshari.github.io/) under Projects → Catalyst, reimagined.
@@ -32,3 +32,11 @@ See [submission-checklist.md](docs/submission-checklist.md) for the assignment m
 - All six profile sections with editable sample details, preferred contacts, address types, emergency contacts, privacy drafts, and scoped sharing drafts.
 - Contextual desktop/mobile navigation and portal search for the expanded destinations.
 - Implementation and documentation are approved for publication through the GitHub Pages workflow. See [coverage](docs/finance-profile-hierarchy.md).
+
+## Student-services revision
+
+- Tasks: Service Indicators, To Do List, individual details, local review notes, and existing personal reminders.
+- My Admissions: all six reference groups and twenty destinations; shared saved what-if scenarios and official confirmation guidance.
+- Other Tools: all fourteen reference tiles, search/category filters, and per-student saved resources.
+- Quick Links & Helpful Contacts: eight common actions, twelve campus offices, eleven helpful contacts, and VA certification guidance.
+- All 73 new destinations render in browser checks; responsive views and isolated persistence verified. Implementation, six screenshots, and case study updates are approved for publication through the GitHub Pages workflow. See [coverage](docs/student-services-hierarchy.md).

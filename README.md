@@ -74,9 +74,10 @@ Hash navigation is deliberate: nested links work on GitHub Pages and other stati
 
 ```text
 src/App.svelte             Shell, hash routes, command search, profile menu
-src/pages/                 Home, Classes, Progress, Services, Account, CaseStudy
+src/pages/                 Home, academic pages, Finances, Profile, Tasks, directories, CaseStudy
 src/lib/catalog.js         Synthetic courses, sections, profiles, terms, services
-src/lib/model.js           Pure enrollment rules, progress, search, ICS export
+src/lib/workspace-directory.js  Tasks, admissions, tools, contacts, saved scenarios
+src/lib/model.js           Enrollment rules, progress, search, state hydration, ICS export
 src/lib/store.js           Per-profile storage and UI notifications
 src/lib/components/        Icons, native dialog, responsive schedule
 src/lib/data/              Original synthetic plans and transcripts
@@ -108,7 +109,7 @@ A structured participant retest, measured before/after comparison, and formal ac
 
 ## Deployment
 
-The public app uses GitHub Pages. `.github/workflows/deploy.yml` runs syntax checks, 44 behavioral tests, and a production build before deployment from main. `src/lib/project.js` contains the public application, source, Figma, and demo links. Hash-based routes work without server rewrite rules. To use another static host, build and deploy the complete `dist/` directory.
+The public app uses GitHub Pages. `.github/workflows/deploy.yml` runs syntax checks, 52 behavioral tests, and a production build before deployment from main. `src/lib/project.js` contains the public application, source, Figma, and demo links. Hash-based routes work without server rewrite rules. To use another static host, build and deploy the complete `dist/` directory.
 
 The previous generated video and captions remain removed. Aayush’s recorded [10:59 walkthrough](https://youtu.be/yZYuDvyQYdc) is uploaded to YouTube. The case study includes a responsive YouTube player, a direct watch link, and a Video navigation shortcut.
 
@@ -136,7 +137,7 @@ The previous generated video and captions remain removed. Aayush’s recorded [1
 
 ## Current delivery status
 
-The production build and 26 domain tests pass. Browser checks and the current 1440px/375px screenshot refresh are recorded in docs/validation.md. The expanded case study includes eight heuristic findings, six illustrated walkthroughs, full-size screenshot links, implementation details, and future work.
+The production build and all 52 behavioral tests pass in the current revision. Browser checks at 1440px, 768px, and 375px and the screenshot updates are recorded in docs/validation.md. The expanded case study includes eight heuristic findings, six illustrated walkthroughs, full-size screenshot links, implementation details, and future work.
 
 Aayush’s replacement walkthrough is uploaded: https://youtu.be/yZYuDvyQYdc (10:59). The case study embeds this recording and provides a direct YouTube watch link and a Video section shortcut.
 
