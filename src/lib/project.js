@@ -8,6 +8,10 @@ export const project = {
   demoDuration: '10:59',
   publishedUrl: 'https://aayushkeshari.github.io/catalyst-reimagined/',
   screenshots: [
+    {src:'./research/finances-overview.jpg',alt:'My Finances with Account Summary beside Financial Aid Awards and Tuition Guarantee, followed by the original four section groups.',caption:'Finances keeps the reference hierarchy with a consistent dark red design and clearly labeled sample amounts.'},
+    {src:'./research/financial-aid-draft.jpg',alt:'Sample financial aid decisions with a declined merit award and accepted college award.',caption:'Saving a local award decision updates the accepted draft total without altering posted account credits.'},
+    {src:'./research/profile-contact.jpg',alt:'Editable sample email and phone records with a preferred home email.',caption:'Contact controls support adding, editing, removal, and a single preferred contact per channel.'},
+    {src:'./research/profile-sharing-mobile.jpg',alt:'Mobile profile sharing summary showing a fictional contact with Grades and Billing in a local draft.',caption:'The mobile sharing flow identifies the selected access areas and makes draft status explicit.'},
     { src: './research/home.png', alt: 'Implemented Catalyst dashboard with a next-semester planning action and student essentials.', caption: 'The implemented home groups common tasks and makes spring planning a clear next action.' },
     { src: './research/classes.png', alt: 'Course search with section-level time, instructor, seat and cart controls.', caption: 'Course discovery and section selection stay in one workspace.' },
     { src: './research/class-filters.png', alt: 'Expanded class filters with afternoon time bounds and Keep to my campus days enabled.', caption: 'Time bounds and campus-day filtering narrow the catalog around an existing plan.' },

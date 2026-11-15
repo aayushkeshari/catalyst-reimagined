@@ -7,7 +7,7 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build && node scripts/standalone-preview.mjs",
     "preview": "vite preview",
-    "check": "node --check src/lib/model.js && node --check src/lib/catalog.js && node --check src/lib/store.js",
+    "check": "node --check src/lib/model.js && node --check src/lib/catalog.js && node --check src/lib/store.js && node --check src/lib/student-account.js",
     "test": "node --test tests/*.test.js"
   },
   "devDependencies": {

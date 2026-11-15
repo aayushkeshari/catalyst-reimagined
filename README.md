@@ -108,7 +108,7 @@ A structured participant retest, measured before/after comparison, and formal ac
 
 ## Deployment
 
-The public app uses GitHub Pages. `.github/workflows/deploy.yml` runs syntax checks, 35 behavioral tests, and a production build before deployment from main. `src/lib/project.js` contains the public application, source, Figma, and demo links. Hash-based routes work without server rewrite rules. To use another static host, build and deploy the complete `dist/` directory.
+The public app uses GitHub Pages. `.github/workflows/deploy.yml` runs syntax checks, 44 behavioral tests, and a production build before deployment from main. `src/lib/project.js` contains the public application, source, Figma, and demo links. Hash-based routes work without server rewrite rules. To use another static host, build and deploy the complete `dist/` directory.
 
 The previous generated video and captions remain removed. Aayush’s recorded [10:59 walkthrough](https://youtu.be/yZYuDvyQYdc) is uploaded to YouTube. The case study includes a responsive YouTube player, a direct watch link, and a Video navigation shortcut.
 

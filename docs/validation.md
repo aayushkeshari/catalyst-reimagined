@@ -69,3 +69,12 @@ Added prerequisite names, time and campus-day filters, clearer waitlist limits, 
 ## Video removal and recording handoff — November 14, 2026
 
 At the project author's request, removed the generated MP4, its captions, and the case-study video player. Cleared the configured video URL. Earlier video-export entries above are historical records, not the current publication state. The replacement recording is pending. Updated docs/demo-script.md for the Aayush profile and current controls, with a 2:50 action/voiceover sequence, microphone setup, trimming, and delivery instructions.
+
+## November 15 — Finances and My Profile expansion
+
+- `npm run check`, `npm test` (44 passing), and production build pass.
+- Browser walkthrough verified all 22 internal finance child routes and all six profile sections, with no browser errors observed.
+- Saved/reloaded an aid decision, preferred email, example address, privacy draft, sharing draft, and insurance checklist; switching to the other demo student showed separate records and a distinct sample balance.
+- Invalid phone numbers and sharing drafts without scopes show actionable errors. Cancelling a sharing-draft removal preserves the entry. Preferred name changes update the home greeting. Portal search finds the new finance destinations. Sample bill CSV download works.
+- At 375px, ten representative account views showed no horizontal document overflow after fixing an offscreen table label. Tablet (768px) and desktop (1440px) layouts were reviewed. Existing light/dark theme tokens apply throughout.
+- Added four current finance/profile screenshots and the detailed [coverage map](finance-profile-hierarchy.md). Private financial/contact/identity details from the source screenshots were not copied. Aayush subsequently supplied his campus email explicitly for the profile record. These checks establish prototype behavior, not measured student usability outcomes.
