@@ -3,7 +3,9 @@ export const project = {
   team: ['Aayush Keshari', 'Nipun Chandra', 'Shivam Kharangate'],
   repository: 'https://github.com/aayushkeshari/catalyst-reimagined',
   figma: 'https://www.figma.com/design/QmzVctFez8wJ2DL9re1hA9/Untitled?node-id=0-1',
-  demoVideo: '',
+  demoVideo: 'https://www.youtube.com/watch?v=yZYuDvyQYdc',
+  demoEmbedUrl: 'https://www.youtube.com/embed/yZYuDvyQYdc',
+  demoDuration: '10:59',
   publishedUrl: 'https://aayushkeshari.github.io/catalyst-reimagined/',
   screenshots: [
     { src: './research/home.png', alt: 'Implemented Catalyst dashboard with a next-semester planning action and student essentials.', caption: 'The implemented home groups common tasks and makes spring planning a clear next action.' },
