@@ -22,7 +22,10 @@ export const project = {
     { src: './research/feedback-revisions.png', alt: 'Eleven feedback items mapped to implemented, retained, or clarified design responses.', caption: 'The feedback record connects each concern to the response in this iteration.' },
     { src: './research/mobile-schedule.png', alt: '375-pixel schedule view retaining the enrolled classes as an agenda.', caption: 'At 375px, enrolled meeting details remain available in an agenda.' },
     { src: './research/mobile-home.png', alt: 'Mobile Catalyst home showing essentials and the full schedule as an agenda.', caption: 'On a narrow viewport, the schedule remains available as an agenda.' },
-    { src: './research/mobile-filters.png', alt: '375-pixel class search with expanded time and campus-day filters and larger section actions.', caption: 'At 375px, filters stack vertically and section actions retain a minimum 44px height.' }
+    { src: './research/mobile-filters.png', alt: '375-pixel class search with expanded time and campus-day filters and larger section actions.', caption: 'At 375px, filters stack vertically and section actions retain a minimum 44px height.' },
+    {src:'./research/academics-overview.jpg',alt:'My Academics with the original five navigation groups and Class Schedule beside Academic Profile.',caption:'The expanded My Academics overview preserves the original grouping while keeping the dark red visual design.'},
+    {src:'./research/academic-grades.jpg',alt:'Term-based grade report showing completed course grades and earned credits.',caption:'Choose a semester, then view grades without mixing future enrollment with completed coursework.'},
+    {src:'./research/academic-what-if.jpg',alt:'Illustrative what-if report showing matching and remaining sample requirements.',caption:'A scenario compares completed coursework without changing the active major or academic record.'}
   ],
   researchDate: 'November 14, 2026'
 };

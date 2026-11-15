@@ -7,7 +7,7 @@ import {addToCart,enrollSections,validateBatch,eligibility,creditSum,meetingLabe
 import Icon from '../lib/components/Icon.svelte';import Modal from '../lib/components/Modal.svelte';import Schedule from '../lib/components/Schedule.svelte';
 let {params=new URLSearchParams()}=$props();
 let tab=$state('find');let filtersOpen=$state(false);let details=$state(null);let compared=$state([]);let showCompare=$state(false);let reviewIds=$state(null);let receipt=$state(null);let dropping=$state(null);
-onMount(()=>{if(TERMS.some(t=>t.id===params.get('term')))setTerm(params.get('term'));if(params.get('tab')==='schedule')tab='schedule';if(params.get('q')){if($data.termId!=='spring-2027')setTerm('spring-2027');filter({query:params.get('q')});}});
+onMount(()=>{if(TERMS.some(t=>t.id===params.get('term')))setTerm(params.get('term'));if(['schedule','cart'].includes(params.get('tab')))tab=params.get('tab');if(params.get('q')){if($data.termId!=='spring-2027')setTerm('spring-2027');filter({query:params.get('q')});}});
 let term=$derived(TERMS.find(t=>t.id===$data.termId));let termId=$derived(term.id);let enrolled=$derived($data.enrolledByTerm[termId]??[]);let cartIds=$derived($data.cartByTerm[termId]??[]);let cart=$derived(cartIds.map(sectionById).filter(Boolean));let waitlist=$derived(($data.waitlistByTerm[termId]??[]).map(sectionById).filter(Boolean));
 let context=$derived({query:'',subject:'All subjects',openOnly:false,mode:'All formats',day:'',hideConflicts:false,startAfter:'',endBefore:'',fitCampusDays:false,...($data.searchByTerm[termId]??{})});
 let filtered=$derived(searchSections(context,$data,termId));let grouped=$derived(COURSES.map(c=>({...c,matches:filtered.filter(s=>s.code===c.code)})).filter(c=>c.matches.length));

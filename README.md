@@ -108,7 +108,7 @@ A structured participant retest, measured before/after comparison, and formal ac
 
 ## Deployment
 
-The public app uses GitHub Pages. `.github/workflows/deploy.yml` runs syntax checks, 26 behavioral tests, and a production build before deployment from main. `src/lib/project.js` contains the public application, source, Figma, and demo links. Hash-based routes work without server rewrite rules. To use another static host, build and deploy the complete `dist/` directory.
+The public app uses GitHub Pages. `.github/workflows/deploy.yml` runs syntax checks, 35 behavioral tests, and a production build before deployment from main. `src/lib/project.js` contains the public application, source, Figma, and demo links. Hash-based routes work without server rewrite rules. To use another static host, build and deploy the complete `dist/` directory.
 
 The previous generated video and captions remain removed. Aayush’s recorded [10:59 walkthrough](https://youtu.be/yZYuDvyQYdc) is uploaded to YouTube. The case study includes a responsive YouTube player, a direct watch link, and a Video navigation shortcut.
 
@@ -146,3 +146,8 @@ Published and verified at https://aayushkeshari.github.io/catalyst-reimagined/ o
 ## Feedback iteration
 
 The eleven feedback items in docs/feedback.md are mapped to implemented changes in docs/feedback-revisions.md and the public case study. Class filters now include inclusive meeting-time bounds and existing campus days. Prerequisites include names. Tasks support saved personal target dates and urgency, without inventing official deadlines. A Quick tour explains the new navigation; progress and waitlist messages clarify important limits. All 26 regression tests pass. Student retesting remains a separate next step.
+
+
+## My Academics hierarchy
+
+The expanded academic area restores the five original sections and 31 destinations, with shared desktop/mobile navigation, local record and planning workflows, and verified links for official university services. See [academic coverage and verification](docs/academic-hierarchy.md).

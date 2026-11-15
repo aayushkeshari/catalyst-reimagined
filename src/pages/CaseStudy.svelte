@@ -5,7 +5,7 @@ import Icon from '../lib/components/Icon.svelte';
 
 const chapters = [
   ['overview', 'Project'], ['research', 'Research'], ['design', 'Design'],
-  ['interface', 'Interface'], ['feedback', 'Feedback'], ['implementation', 'Implementation'],
+  ['interface', 'Interface'], ['academic-hierarchy','Academic coverage'], ['feedback', 'Feedback'], ['implementation', 'Implementation'],
   ['demo', 'Video'], ['future', 'Future work']
 ];
 function jump(event, id) {
@@ -38,7 +38,8 @@ const frames = [
 ];
 const modules = [
   ['src/App.svelte','Shared shell, hash routes, keyboard search, profile selection, theme, and Quick tour.'],
-  ['src/pages/','Home, Classes, Progress, Services, Account, and this case study.'],
+  ['src/pages/','Home, Classes, Progress, Services, Academic Records, Graduation, Planning, Account, and this case study.'],
+  ['src/lib/academics.js','The five-section academic hierarchy, record/report helpers, scenario data, and verified official destinations.'],
   ['src/lib/catalog.js + src/lib/data/','Synthetic courses, sections, terms, profiles, original sample plans, and transcripts.'],
   ['src/lib/model.js','Pure JavaScript rules for validation, filtering, transactions, progress, dates, and calendar export.'],
   ['src/lib/store.js','Svelte stores, per-profile browser persistence, hydration, notifications, and downloads.'],
@@ -88,7 +89,7 @@ const modules = [
     <p>This is a fundamental change to task organization and state communication. One Classes & schedule workspace connects discovery, comparison, cart, review, and confirmation. A visual refresh supports that structure, while registration behavior and academic labels make the student’s next action explicit.</p>
     <div class="case-summary-grid">
       <article class="panel padded"><h3>Design goal</h3><p>Keep related decisions together, distinguish planning from enrollment, and make errors understandable and recoverable.</p></article>
-      <article class="panel padded"><h3>Delivered</h3><p>A public Svelte prototype, a documented research-to-design process, eleven feedback responses, and fifteen screenshots of the current interface.</p></article>
+      <article class="panel padded"><h3>Delivered</h3><p>A public Svelte prototype, a documented research-to-design process, eleven feedback responses, and documented desktop and mobile screenshots.</p></article>
     </div>
     <figure class="case-image"><a href="./research/original-home.png" target="_blank" rel="noreferrer"><img src="./research/original-home.png" alt="Original Catalyst homepage with translucent category tiles over a detailed nighttime campus photograph." loading="lazy"/></a><figcaption>Original interface supplied in the team’s critique. This is evidence of the visual baseline; it does not establish unobserved registration behavior.</figcaption></figure>
     {@render screenshot('home.png')}
@@ -132,13 +133,22 @@ const modules = [
     <article class="case-walkthrough"><span class="eyebrow">F / Use the same workflow on a phone</span><h3>Keep the information, change the layout.</h3><p>The mobile navigation drawer preserves destinations, Home retains its essentials and agenda, and the filter panel stacks within the viewport. Section meeting details receive more emphasis and primary section actions have a minimum 44px height. Current 375px checks found no horizontal document overflow on Home, class search, or the confirmed schedule.</p><div class="case-shot-grid case-phone-shots">{@render screenshot('mobile-home.png')}{@render screenshot('mobile-filters.png')}</div></article>
   </section>
 
+  <section class="case-section" id="academic-hierarchy" tabindex="-1">
+    <span class="eyebrow">Expanded academic coverage</span><h2>Keep the familiar hierarchy, restore the missing tasks.</h2>
+    <p>The My Academics area follows the original five-section order: Classes and Schedule; Calendars and Deadlines; Grades/Transcript/Enroll Cert; Graduation/Commencement; and Academic Progress. The same hierarchy drives the sidebar, mobile drawer, service directory, and portal search. A new overview places Class Schedule beside Academic Profile, including academic programs and advising contacts.</p>
+    <p>The 31 destinations include term-based grades, searchable course history, milestone empty states, repeated-course checks, downloadable sample records and letters, graduation drafts and status, semester planning, what-if comparisons, transfer-credit questions, and advising. Class swaps validate the replacement before changing either enrollment. Official transcript orders, university applications, credential delivery, and law/medicine services open verified official resources.</p>
+    <p>Drafts, plans, requested reports, and transfer questions are isolated by demo profile and saved in the browser. A saved plan is not enrollment; a draft is not an official application; a transfer question does not award credit; and a sample report is not a certified document. Earlier workflow screenshots show the preceding navigation; these captures show the expanded structure.</p>
+    <div class="case-gallery">{@render screenshot('academics-overview.jpg')}{@render screenshot('academic-grades.jpg')}{@render screenshot('academic-what-if.jpg')}</div>
+    <a class="button secondary" href={`${project.repository}/blob/main/docs/academic-hierarchy.md`} target="_blank" rel="noreferrer">Full academic feature coverage <Icon name="external" size={15}/></a>
+  </section>
+
   <section class="case-section" id="feedback" tabindex="-1">
     <span class="eyebrow">05 / Feedback & subsequent iteration</span>
     <h2>Feedback becomes a visible change.</h2>
     <p>Eleven student feedback comments supplied by the project author guided a subsequent implementation iteration. Because a working prototype already existed, this is documented as feedback before that revision. We retained the reassuring confirmation and revised planning, terminology, mobile controls, guidance, and date visibility.</p>
     <div class="table-scroll"><table class="feedback-iteration-table"><caption>Eleven comments and their design responses</caption><thead><tr><th>Feedback</th><th>Response in this iteration</th><th>Decision</th></tr></thead><tbody>{#each feedbackRevisions as item}<tr><td><strong>{item.id} · {item.perspective}</strong><p class="muted small">{item.concern}</p></td><td>{item.change}</td><td><span class="badge neutral">{item.status}</span></td></tr>{/each}</tbody></table></div>
     <details class="case-evidence-image"><summary>See the captured feedback-to-change record</summary>{@render screenshot('feedback-revisions.png')}</details>
-    <h3>What verification establishes</h3><p>All 26 behavioral tests pass. Browser walkthroughs exercised named prerequisites, time and campus-day filtering, the blocked conflict review and corrected enrollment, personal target labels and persistence, the tour, and keyboard search. Captures at 1440px and 375px document the current desktop and mobile states. These checks establish working behavior; they do not establish a measured improvement in student task success, speed, or satisfaction.</p>
+    <h3>What verification establishes</h3><p>All 35 behavioral tests pass. Browser walkthroughs exercised named prerequisites, time and campus-day filtering, the blocked conflict review and corrected enrollment, personal target labels and persistence, the tour, and keyboard search. Captures at 1440px and 375px document the current desktop and mobile states. These checks establish working behavior; they do not establish a measured improvement in student task success, speed, or satisfaction.</p>
     <p>The feedback collection dates, individual task timings, and a structured participant retest were not supplied. The next evaluation should test whether students understand the revised states and controls, using the prepared protocol and recording actual observations.</p>
     <div class="button-row"><a class="button secondary" href={`${project.repository}/blob/main/docs/feedback.md`} target="_blank" rel="noreferrer">Student feedback<Icon name="external" size={14}/></a><a class="button secondary" href={`${project.repository}/blob/main/docs/feedback-revisions.md`} target="_blank" rel="noreferrer">Revision log<Icon name="external" size={14}/></a><a class="button secondary" href={`${project.repository}/blob/main/docs/validation.md`} target="_blank" rel="noreferrer">Verification record<Icon name="external" size={14}/></a></div>
   </section>
@@ -149,7 +159,7 @@ const modules = [
     <p>Svelte 5 provides reactive components and stores; JavaScript holds the domain rules; Vite builds the static application. The project uses @sveltejs/vite-plugin-svelte, local SVG icons, CSS design tokens, native HTML dialogs, browser localStorage, and the built-in Node test runner. No UI framework, backend, or database is required.</p>
     <p><strong>Data flow:</strong> catalog and sample plans supply records → pure functions filter or validate them → the store saves valid profile state → Svelte renders the resulting status. UI components do not call a university API. Term-specific carts prevent selections crossing semesters; safe hydration rejects unknown records and isolates profiles. Storage failures show a session-only notice.</p>
     <div class="table-scroll"><table><caption>Code structure and responsibilities</caption><thead><tr><th>Location</th><th>Responsibility</th></tr></thead><tbody>{#each modules as module}<tr><td><code>{module[0]}</code></td><td>{module[1]}</td></tr>{/each}</tbody></table></div>
-    <p>Hash-based routes work on GitHub Pages without server rewrite rules. The deployment workflow runs syntax checks, 26 behavioral tests, and a production build before publishing. Tests cover transaction atomicity, prerequisites, conflicts, terms, credit limits, waitlists, drops, profile separation, saved filters, valid dates, progress totals, and calendar output.</p>
+    <p>Hash-based routes work on GitHub Pages without server rewrite rules. The deployment workflow runs syntax checks, 35 behavioral tests, and a production build before publishing. Tests cover transaction atomicity, prerequisites, conflicts, terms, credit limits, waitlists, drops, profile separation, saved filters, valid dates, progress totals, and calendar output.</p>
     <p><strong>Prototype boundaries:</strong> authentication, real student records, live seats, linked lecture/lab rules, payment processing, delivered reminders, and transfer-credit evaluation are outside the implemented scope. The Aayush profile and GPA are demo presentation data. The application never registers students in real UC courses.</p>
     <div class="button-row"><a class="button primary" href={project.publishedUrl} target="_blank" rel="noreferrer">Try the public application<Icon name="external" size={15}/></a><a class="button secondary" href={project.repository} target="_blank" rel="noreferrer">Browse the source<Icon name="code" size={15}/></a><a class="button secondary" href="https://aayushkeshari.github.io/" target="_blank" rel="noreferrer">Aayush’s portfolio<Icon name="external" size={15}/></a></div>
   </section>

@@ -11,7 +11,7 @@ Updated November 14, 2026. The Svelte 5 + Vite prototype, source repository, and
 - Background research, heuristic evidence review, Figma reference, study protocol and observation templates, final presentation and speaker notes.
 - Eleven feedback items documented and mapped to implemented, retained, or clarified responses in [feedback-revisions.md](docs/feedback-revisions.md).
 - Feedback revisions: prerequisite names, time and campus-day filters, larger mobile section actions, waitlist limitations, personal target dates and urgency, credit assumptions, transfer-credit guidance, platform-aware shortcuts, and an optional Quick tour.
-- Public GitHub Pages deployment and automated syntax checks, 26 behavioral tests, and production build.
+- Public GitHub Pages deployment and automated syntax checks, 35 behavioral tests, and production build.
 - Fifteen current interface screenshots in the case study: ten replaced images plus five additional views covering filters, personal targets, the tour, feedback revisions, and mobile filters. Original Catalyst baseline preserved.
 - Aayush’s recorded walkthrough is uploaded to [YouTube](https://youtu.be/yZYuDvyQYdc), duration 10:59. The previous generated video remains removed. The case study includes the responsive embed and a direct watch link.
 

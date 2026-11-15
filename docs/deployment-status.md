@@ -9,7 +9,7 @@ Updated November 14, 2026. The working prototype and case study are publicly hos
 | Source | [aayushkeshari/catalyst-reimagined](https://github.com/aayushkeshari/catalyst-reimagined) |
 | Audience | Public |
 | Portfolio entry | [Aayush’s portfolio](https://aayushkeshari.github.io/) → Projects → Catalyst, reimagined → Read the UI/UX case study |
-| Deployment workflow | `.github/workflows/deploy.yml`: syntax checks, 26 behavioral tests, production build, Pages deployment |
+| Deployment workflow | `.github/workflows/deploy.yml`: syntax checks, 35 behavioral tests, production build, Pages deployment |
 | Feedback iteration | Eleven items mapped to completed revisions, retained behavior, or clarified limitations; see [feedback-revisions.md](feedback-revisions.md) |
 | Screenshot gallery | Fifteen current screenshots using the red/black interface and Aayush demo profile, including filters, personal targets, feedback revisions, and 375px mobile views |
 | Demo video | [Aayush’s recorded walkthrough](https://youtu.be/yZYuDvyQYdc), 10:59. Embedded in the case study with a direct watch link and Video section shortcut. Previous generated video remains removed. |

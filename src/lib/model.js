@@ -1,11 +1,12 @@
 import { TERMS, initialSchedule, sectionById, SECTIONS, courseLabel } from './catalog.js';
 import { earnedCredits, cumulativeGPA, isPassingGrade } from './data/progression.js';
+import { emptyAcademicState, hydrateAcademics } from './academics.js';
 
 export { isPassingGrade };
 export const SCHEMA_VERSION = 2;
 export const CREDIT_LIMIT = 18;
 export function createState(profile) {
-  return { version: SCHEMA_VERSION, userId: profile.id, termId: 'spring-2027', enrolledByTerm: { 'fall-2026': initialSchedule(profile), 'spring-2027': [] }, cartByTerm: {}, waitlistByTerm: {}, receipts: [], completedTasks: [], taskDates: {}, savedScholarships: [], preferences: { reminders: true, compactSchedule: false }, searchByTerm: {}, reviewChecklist: [] };
+  return { version: SCHEMA_VERSION, userId: profile.id, termId: 'spring-2027', enrolledByTerm: { 'fall-2026': initialSchedule(profile), 'spring-2027': [] }, cartByTerm: {}, waitlistByTerm: {}, receipts: [], completedTasks: [], taskDates: {}, savedScholarships: [], preferences: { reminders: true, compactSchedule: false }, searchByTerm: {}, reviewChecklist: [], academics: emptyAcademicState() };
 }
 export function hydrateState(raw, profile) {
   const fallback = createState(profile);
@@ -13,7 +14,7 @@ export function hydrateState(raw, profile) {
   const known = new Set(SECTIONS.map(s => s.id));
   const cleanIds = list => Array.isArray(list) ? [...new Set(list.filter(id => known.has(id)))] : [];
   const enrolled = Array.isArray(raw.enrolledByTerm?.['spring-2027']) ? raw.enrolledByTerm['spring-2027'].map(s => sectionById(s?.id)).filter(Boolean) : [];
-  return { ...fallback, termId: TERMS.some(t => t.id === raw.termId) ? raw.termId : fallback.termId,
+  return { ...fallback, academics: hydrateAcademics(raw.academics,profile), termId: TERMS.some(t => t.id === raw.termId) ? raw.termId : fallback.termId,
     enrolledByTerm: { ...fallback.enrolledByTerm, 'spring-2027': [...new Map(enrolled.map(s => [s.code,s])).values()] },
     cartByTerm: { 'spring-2027': cleanIds(raw.cartByTerm?.['spring-2027']) }, waitlistByTerm: { 'spring-2027': cleanIds(raw.waitlistByTerm?.['spring-2027']) },
     receipts: Array.isArray(raw.receipts) ? raw.receipts.filter(r=>r && typeof r.id==='string' && TERMS.some(t=>t.id===r.termId) && typeof r.timestamp==='string' && Number.isFinite(Date.parse(r.timestamp)) && Array.isArray(r.courses) && r.courses.every(c=>c && typeof c.code==='string' && typeof c.title==='string' && typeof c.section==='string' && Number.isFinite(c.credits))).slice(0,30) : [], completedTasks: Array.isArray(raw.completedTasks) ? raw.completedTasks.filter(x => typeof x === 'string') : [],
@@ -90,6 +91,15 @@ export function dropSection(state,id,termId) {
   const section=(state.enrolledByTerm[termId]??[]).find(s=>s.id===id);
   if (!section) return {ok:false,message:'This section is not in your schedule.'};
   return {ok:true,section,state:{...state,enrolledByTerm:{...state.enrolledByTerm,[termId]:state.enrolledByTerm[termId].filter(s=>s.id!==id)}}};
+}
+export function swapSection(state,profile,oldId,newId,termId) {
+  if(oldId===newId) return {ok:false,message:'Choose a different section.'};
+  const removed=dropSection(state,oldId,termId);
+  if(!removed.ok) return removed;
+  const added=enrollSections(removed.state,profile,[newId],termId);
+  if(!added.ok) return {ok:false,message:added.problems?.[0]?.errors?.[0]?.message??'This replacement cannot be enrolled.',problems:added.problems};
+  const receipt={...added.receipt,swapFrom:{code:removed.section.code,section:removed.section.section,id:removed.section.id}};
+  return {...added,receipt,state:{...added.state,receipts:[receipt,...added.state.receipts.slice(1)]}};
 }
 export function academicSummary(profile,state) {
   const earned=earnedCredits(profile.transcript);
