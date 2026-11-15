@@ -111,7 +111,7 @@ A structured participant retest, measured before/after comparison, and formal ac
 
 The public app uses GitHub Pages. `.github/workflows/deploy.yml` runs syntax checks, 26 behavioral tests, and a production build before deployment from main. `src/lib/project.js` contains the public application, source, Figma, and demo links. Hash-based routes work without server rewrite rules. To use another static host, build and deploy the complete `dist/` directory.
 
-The previous generated video and captions have been removed from the public build. Aayush will record the replacement. [Recording script and Mac instructions](docs/demo-script.md) provide a timed 2:50 walkthrough of the current interface. The video requirement is pending until that recording is linked.
+The previous generated video and captions remain removed. Aayush’s recorded [10:59 walkthrough](https://youtu.be/yZYuDvyQYdc) is uploaded to YouTube. The case study includes a responsive YouTube player, a direct watch link, and a Video navigation shortcut.
 
 ## Assignment materials
 
@@ -122,7 +122,6 @@ The previous generated video and captions have been removed from the public buil
 - [Participant observation sheet](docs/participant-observations.csv)
 - [Feedback-to-change log](docs/feedback-log.csv)
 - [Implemented feedback revisions and verification](docs/feedback-revisions.md)
-- [Demo recording script](docs/demo-script.md)
 - [Final presentation speaker notes](docs/final-presentation.md)
 - [Eight-slide presentation](static/presentation.html)
 - [Verification record](docs/validation.md)
@@ -140,7 +139,7 @@ The previous generated video and captions have been removed from the public buil
 
 The production build and 26 domain tests pass. Browser checks and the current 1440px/375px screenshot refresh are recorded in docs/validation.md. The expanded case study includes eight heuristic findings, six illustrated walkthroughs, full-size screenshot links, implementation details, and future work.
 
-The old video has been removed. The timed script in docs/demo-script.md is ready for Aayush's own recording; no finished replacement is claimed.
+Aayush’s replacement walkthrough is uploaded: https://youtu.be/yZYuDvyQYdc (10:59). The case study embeds this recording and provides a direct YouTube watch link and a Video section shortcut.
 
 Published and verified at https://aayushkeshari.github.io/catalyst-reimagined/ on GitHub Pages. See docs/deployment-status.md for deployment details. The case study is linked from the Catalyst entry in Aayush’s portfolio. Follow-up student testing, team review, and actual presentation/submission remain team tasks.
 
