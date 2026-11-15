@@ -113,20 +113,6 @@ The public app uses GitHub Pages. `.github/workflows/deploy.yml` runs syntax che
 
 The previous generated video and captions remain removed. Aayush’s recorded [10:59 walkthrough](https://youtu.be/yZYuDvyQYdc) is uploaded to YouTube. The case study includes a responsive YouTube player, a direct watch link, and a Video navigation shortcut.
 
-## Assignment materials
-
-- [Documentation coverage and public links](docs/documentation-coverage.md)
-- [Research and source limitations](docs/research.md)
-- [Heuristic review](docs/heuristic-evaluation.md)
-- [Think-aloud protocol](docs/study-protocol.md)
-- [Participant observation sheet](docs/participant-observations.csv)
-- [Feedback-to-change log](docs/feedback-log.csv)
-- [Implemented feedback revisions and verification](docs/feedback-revisions.md)
-- [Final presentation speaker notes](docs/final-presentation.md)
-- [Eight-slide presentation](static/presentation.html)
-- [Verification record](docs/validation.md)
-- [Submission checklist](docs/submission-checklist.md)
-
 ## References
 
 - [Original repository](https://github.com/nightfury3128/UI-catalyst)
@@ -139,7 +125,7 @@ The previous generated video and captions remain removed. Aayush’s recorded [1
 
 The production build and all 65 behavioral tests pass in the current revision. Browser checks at 1440px, 768px, and 375px and the screenshot updates are recorded in docs/validation.md. The expanded case study includes eight heuristic findings, six illustrated walkthroughs, full-size screenshot links, implementation details, and future work.
 
-Aayush’s replacement walkthrough is uploaded: https://youtu.be/yZYuDvyQYdc (10:59). The case study embeds this recording and provides a direct YouTube watch link and a Video section shortcut.
+The walkthrough is uploaded here: https://youtu.be/yZYuDvyQYdc (10:59). The case study embeds this recording and provides a direct YouTube watch link and a Video section shortcut.
 
 Published and verified at https://aayushkeshari.github.io/catalyst-reimagined/ on GitHub Pages. See docs/deployment-status.md for deployment details. The case study is linked from the Catalyst entry in Aayush’s portfolio. Follow-up student testing, team review, and actual presentation/submission remain team tasks.
 
