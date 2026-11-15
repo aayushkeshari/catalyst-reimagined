@@ -279,3 +279,21 @@ dialog{background:var(--surface);color:var(--ink);border:1px solid var(--line);b
 @media(max-width:1100px){.workspace-tools-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.workspace-tools-grid,.quick-action-grid{grid-template-columns:1fr}.workspace-resource-card{min-height:240px}.workspace-detail-heading{gap:12px;flex-wrap:wrap}.workspace-detail-heading h2{font-size:25px}.workspace-detail-heading>.tile-icon{display:none}.workspace-detail-heading>.icon-button{align-self:flex-start}.directory-controls>.button{min-height:44px}.quick-action{padding:18px 0}.sample-letter{font-size:10px;padding:14px}.quick-va-link{padding:20px}.quick-va-link strong{font-size:13px}.workspace-resource-card h2{font-size:27px}}
 .section-nav-count{display:inline-flex;align-items:center;justify-content:center;min-width:19px;min-height:19px;margin-left:8px;padding:0 4px;border:1px solid currentColor;border-radius:20px;font-size:9px}
+
+/* Top-level categories keep their overview link and a separate disclosure control. */
+.workspace-root-row{display:flex;align-items:stretch;border-radius:5px;min-width:0}
+.workspace-root-row>a{flex:1;min-width:0}.workspace-root-label{min-width:0;line-height:1.6}
+.workspace-root-toggle{display:grid;place-items:center;flex:0 0 34px;min-height:43px;border-radius:5px;color:inherit;background:transparent;padding:0}
+.workspace-root-toggle>svg{transition:transform .15s}.workspace-root-toggle.expanded>svg{transform:rotate(180deg)}
+.sidebar .workspace-root-row:hover{background:#85000d}.sidebar .workspace-root-row.active{background:#111111}
+.sidebar nav .workspace-root-row>a,.sidebar nav .workspace-root-row>a:hover,.sidebar nav .workspace-root-row>a.active{background:transparent}
+.sidebar .workspace-root-toggle:hover{background:#ffffff15}.workspace-root-children[hidden]{display:none}
+.workspace-root-children>.academic-nav{margin-top:3px}
+[data-theme=dark] .sidebar .workspace-root-row:hover{background:#6b1111}
+[data-theme=dark] .sidebar .workspace-root-row.active{background:#881818;box-shadow:inset 3px 0 #ff8d80}
+[data-theme=dark] .sidebar .workspace-root-row>a.active{box-shadow:none}
+.mobile-navigation>.workspace-root-row>a{display:flex;align-items:center;gap:12px;padding:14px 12px;font-size:13px;border-bottom:1px solid var(--line)}
+.mobile-navigation .workspace-root-toggle{flex-basis:44px;min-height:48px;color:var(--ink);border-bottom:1px solid var(--line)}
+.mobile-navigation .workspace-root-row.active{background:var(--accent-soft);color:var(--accent)}
+.mobile-navigation .workspace-root-toggle:hover{background:var(--surface-soft)}
+@media(prefers-reduced-motion:reduce){.workspace-root-toggle>svg{transition:none}}
