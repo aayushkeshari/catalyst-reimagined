@@ -1,20 +1,20 @@
-// Public prototype data. Financial amounts and personal details are synthetic, except the owner-provided campus email.
+// Workspace account records and owner-provided campus email.
 const page=(id,label,description)=>({id,label,description,href:`#/finances/${id}`,icon:'wallet'});
 export const FINANCE_GROUPS=[
  {id:'billing',label:'Billing Information',icon:'wallet',items:[
  page('tuition-fees','Tuition and Fee Rates','Find tuition information for your campus and cohort.'),
- page('direct-deposit','Direct Deposit Enrollment','Review a sample direct deposit summary and find official enrollment instructions.'),
- page('refund-appeal','Tuition Refund Appeal','Check the sample account for eligible refund appeal terms.'),
+ page('direct-deposit','Direct Deposit Enrollment','Review a direct deposit summary and find official enrollment instructions.'),
+ page('refund-appeal','Tuition Refund Appeal','Check the account for eligible refund appeal terms.'),
  page('payment-plan','Payment Plan Enrollment','Explore a three-installment planning example.'),
  page('gradguard','GradGuard','Explore tuition insurance through the university’s linked provider.'),
  page('bursar','Office of the Bursar','Find official billing and payment support.'),
  page('right-to-know','Right to Know Information','Open university consumer information and disclosures.')]},
  {id:'aid',label:'Manage Financial Aid',icon:'star',items:[
- page('financial-aid','View Financial Aid','Choose an aid year and review sample awards.'),
+ page('financial-aid','View Financial Aid','Choose an aid year and review awards.'),
  page('accept-decline','Accept / Decline Financial Aid','Practice reviewing award decisions in a local draft.'),
- page('permissions','Federal Aid Permissions','View the sample permission summary and agreement guidance.')]},
+ page('permissions','Federal Aid Permissions','View the permission summary and agreement guidance.')]},
  {id:'insurance',label:'Student Health Insurance',icon:'shield',items:[
- page('waiver-status','Health Insurance Waiver Status','Choose a term to review the sample waiver record.'),
+ page('waiver-status','Health Insurance Waiver Status','Choose a term to review the waiver record.'),
  page('insurance-card','Print Health Insurance Card SS','Find official instructions for accessing your insurer’s ID card.'),
  page('waiver-update','Health Insurance Waiver Update','Prepare a local checklist for your waiver update.')]},
  {id:'links',label:'Financial Aid Links',icon:'external',items:[
@@ -22,7 +22,7 @@ export const FINANCE_GROUPS=[
  {id:'scholarships',label:'Scholarship Resources',description:'Explore scholarship resources.',href:'#/scholarships',icon:'star'},
  page('help','Financial Aid & Billing Help','Find instructions for common financial tasks.')]}
 ];
-export const FINANCE_EXTRA=[page('pending-aid','View Pending Financial Aid','Review anticipated sample aid separately from posted credits.'),page('bill','View Itemized Bill','Review sample charges, credits, and payments.'),page('inquiry','Account Inquiry','Explore posted activity on this sample account.'),page('payment','Make a Payment','Continue to official payment instructions.'),page('cohort','Tuition Guarantee – Cohort Details','Find official tuition guarantee and cohort information.'),page('tax','1098-T Tax Form','Find official instructions for tax documents.'),page('bank-accounts','Bank Accounts','Learn where to manage bank details securely.')];
+export const FINANCE_EXTRA=[page('pending-aid','View Pending Financial Aid','Review anticipated aid separately from posted credits.'),page('bill','View Itemized Bill','Review charges, credits, and payments.'),page('inquiry','Account Inquiry','Explore posted activity on this account.'),page('payment','Make a Payment','Continue to official payment instructions.'),page('cohort','Tuition Guarantee – Cohort Details','Find official tuition guarantee and cohort information.'),page('tax','1098-T Tax Form','Find official instructions for tax documents.'),page('bank-accounts','Bank Accounts','Learn where to manage bank details securely.')];
 export const FINANCE_PAGES=[...FINANCE_GROUPS.flatMap(g=>g.items.map(p=>({...p,group:g.label}))),...FINANCE_EXTRA.map(p=>({...p,group:'Account Services'}))];
 export const PROFILE_PAGES=[['personal','Personal Details','people'],['contact','Contact Details','phone'],['addresses','Addresses','home'],['emergency','Emergency Contacts','people'],['privacy','FERPA','shield'],['sharing','Share my Information','people']].map(([id,label,icon])=>({id,label,icon,href:`#/profile/${id}`,group:'My Profile'}));
 export const accountPage=route=>[...FINANCE_PAGES,...PROFILE_PAGES].find(p=>p.href.split('?')[0]===`#/${route}`);
@@ -37,28 +37,28 @@ export const ACCOUNT_LINKS={
  catalyst:'https://catalyst.uc.edu/',
 };
 export const FINANCE_RESOURCES={
- 'tuition-fees':{url:ACCOUNT_LINKS.tuition,label:'Open UC Tuition & Fees',text:'Use the official tuition page to identify your campus, program, and entering cohort. The amounts in this prototype are illustrative and are not a tuition quote.'},
- gradguard:{url:ACCOUNT_LINKS.gradguard,label:'Visit GradGuard',text:'Explore the provider’s university page for tuition insurance details, exclusions, pricing, and enrollment. Coverage is not included in this prototype.'},
+ 'tuition-fees':{url:ACCOUNT_LINKS.tuition,label:'Open UC Tuition & Fees',text:'Use the official tuition page to identify your campus, program, and entering cohort. The amounts in this workspace are and are not a tuition quote.'},
+ gradguard:{url:ACCOUNT_LINKS.gradguard,label:'Visit GradGuard',text:'Explore the provider’s university page for tuition insurance details, exclusions, pricing, and enrollment. Coverage is not included in this workspace.'},
  bursar:{url:ACCOUNT_LINKS.bursar,label:'Visit the Office of the Bursar',text:'Find official help with bills, payment methods, refunds, and student account questions.'},
  'right-to-know':{url:ACCOUNT_LINKS.rights,label:'Open Right to Know',text:'University consumer information is available on the official Right to Know page.'},
  'aid-office':{url:ACCOUNT_LINKS.aid,label:'Visit Student Financial Aid',text:'Find official information about applying for, understanding, and managing financial aid.'},
  help:{url:ACCOUNT_LINKS.help,label:'Open the Catalyst Self-Help Guide',text:'Find university instructions for aid, billing, direct deposit, health insurance, and delegated access.'},
- payment:{url:ACCOUNT_LINKS.help,label:'View official payment instructions',text:'Use the “Make a Payment: Student Steps” section of the UC guide, then sign in to official Catalyst to access the university’s payment provider. This prototype does not collect payment details or process payments.'},
+ payment:{url:ACCOUNT_LINKS.help,label:'View official payment instructions',text:'Use the “Make a Payment: Student Steps” section of the UC guide, then sign in to official Catalyst to access the university’s payment provider. This workspace does not collect payment details or process payments.'},
  cohort:{url:ACCOUNT_LINKS.tuition,label:'Find your official cohort details',text:'Find the Cincinnati Tuition Guarantee information for your entering cohort. Cohort rates and eligibility must be confirmed on the official website.'},
- tax:{url:ACCOUNT_LINKS.help,label:'Find 1098-T instructions',text:'Use “Download Your 1098-T” in the official self-help guide. Tax documents are not generated by this prototype.'},
+ tax:{url:ACCOUNT_LINKS.help,label:'Find 1098-T instructions',text:'Use “Download Your 1098-T” in the official self-help guide. Tax documents are not generated by this workspace.'},
  'bank-accounts':{url:ACCOUNT_LINKS.deposit,label:'View official bank account instructions',text:'Manage bank accounts only through official university services. Student employees may be directed to Employee Self-Service; the official instructions explain the correct path. No bank information can be entered here.'},
  'insurance-card':{url:ACCOUNT_LINKS.card,label:'Open official ID card instructions',text:'UC’s current instructions direct students to their UHCSR account for insurance cards. The university notes that the former Catalyst Print ID Card function no longer works. Follow the official instructions to access your card.'}
 };
 export const money=cents=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(cents/100);
 export function ledger(profile){return [
- {id:'tuition',date:'2026-08-01',description:'Sample tuition',cents:700000,kind:'Charge'},
- {id:'fees',date:'2026-08-01',description:'Sample mandatory fees',cents:100000,kind:'Charge'},
- {id:'aid',date:'2026-08-18',description:'Sample posted scholarship credit',cents:-350000,kind:'Aid credit'},
- {id:'payment',date:'2026-10-20',description:'Sample account payment',cents:profile.id==='arthur'?-450000:-80000,kind:'Payment'}
+ {id:'tuition',date:'2026-08-01',description:'tuition',cents:700000,kind:'Charge'},
+ {id:'fees',date:'2026-08-01',description:'mandatory fees',cents:100000,kind:'Charge'},
+ {id:'aid',date:'2026-08-18',description:'posted scholarship credit',cents:-350000,kind:'Aid credit'},
+ {id:'payment',date:'2026-10-20',description:'account payment',cents:profile.id==='arthur'?-450000:-80000,kind:'Payment'}
 ];}
 export function accountSummary(profile){const rows=ledger(profile),balance=rows.reduce((a,r)=>a+r.cents,0);return {balance,dueNow:Math.min(Math.max(0,balance),150000),futureDue:Math.max(0,balance-150000),lastPayment:rows.find(r=>r.kind==='Payment')};}
 export function aidYears(profile){return profile.id==='arthur'?[2027,2026,2025,2024,2023,2022]:[2027,2026];}
-export function awards(profile,year){if(!aidYears(profile).includes(Number(year))||Number(year)===aidYears(profile).at(-1))return [];return [{id:'merit',name:'Sample merit scholarship',cents:200000},{id:'college',name:'Sample college award',cents:150000}];}
+export function awards(profile,year){if(!aidYears(profile).includes(Number(year))||Number(year)===aidYears(profile).at(-1))return [];return [{id:'merit',name:'Merit scholarship',cents:200000},{id:'college',name:'College award',cents:150000}];}
 export const aidYearLabel=year=>`${year-1}–${year}`;
 export function awardTotals(profile,year,decisions={}){const rows=awards(profile,year);return {offered:rows.reduce((a,r)=>a+r.cents,0),accepted:rows.reduce((a,r)=>a+(decisions[r.id]==='Declined'?0:r.cents),0)};}
 export function installments(cents){if(!Number.isSafeInteger(cents)||cents<0)return [];const base=Math.floor(cents/3);return [base,base,base+cents%3];}

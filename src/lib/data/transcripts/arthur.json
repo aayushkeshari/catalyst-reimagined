@@ -1,55 +1,321 @@
 {
-	"schemaVersion": "1.0",
-	"studentId": "DEMO-CS-2027-001",
-	"catalogYear": 2022,
-	"entries": [
-		{ "code": "CS1100", "credits": 1, "term": "fall-2022", "grade": "A" },
-		{ "code": "ENED1100", "credits": 3, "term": "fall-2022", "grade": "B+" },
-		{ "code": "ENGL1001", "credits": 3, "term": "fall-2022", "grade": "A-" },
-		{ "code": "MATH1061", "credits": 4, "term": "fall-2022", "grade": "B" },
-		{ "code": "PHYS2001", "credits": 4, "term": "fall-2022", "grade": "B" },
-		{ "code": "PHYS2001L", "credits": 1, "term": "fall-2022", "grade": "B+" },
-
-		{ "code": "CHEM1040", "credits": 4, "term": "spring-2023", "grade": "B-" },
-		{ "code": "CHEM1040L", "credits": 1, "term": "spring-2023", "grade": "B" },
-		{ "code": "CS1021C", "credits": 4, "term": "spring-2023", "grade": "B+" },
-		{ "code": "ENED1120", "credits": 3, "term": "spring-2023", "grade": "B" },
-		{ "code": "MATH1062", "credits": 4, "term": "spring-2023", "grade": "B-" },
-		{ "code": "PD1011", "credits": 1, "term": "spring-2023", "grade": "A" },
-
-		{ "code": "COOP2011", "credits": 0, "term": "fall-2023", "grade": "S" },
-
-		{ "code": "CS2011", "credits": 3, "term": "spring-2024", "grade": "B+" },
-		{ "code": "CS2023", "credits": 3, "term": "spring-2024", "grade": "A-" },
-		{ "code": "CS2028C", "credits": 4, "term": "spring-2024", "grade": "B" },
-		{ "code": "IT2030C", "credits": 3, "term": "spring-2024", "grade": "A-" },
-		{ "code": "MATH2076", "credits": 3, "term": "spring-2024", "grade": "C+" },
-
-		{ "code": "COOP2012", "credits": 0, "term": "summer-2024", "grade": "S" },
-
-		{ "code": "CS2071", "credits": 3, "term": "fall-2024", "grade": "B" },
-		{ "code": "CS3003", "credits": 3, "term": "fall-2024", "grade": "B+" },
-		{ "code": "ENGL2089", "credits": 3, "term": "fall-2024", "grade": "B+" },
-		{ "code": "PD2050", "credits": 1, "term": "fall-2024", "grade": "A" },
-		{ "code": "STAT2037", "credits": 3, "term": "fall-2024", "grade": "B" },
-		{ "code": "HIST1001", "credits": 3, "term": "fall-2024", "grade": "A-" },
-
-		{ "code": "COOP3011", "credits": 0, "term": "spring-2025", "grade": "S" },
-
-		{ "code": "COMM1071", "credits": 3, "term": "summer-2025", "grade": "B+" },
-		{ "code": "CS4071", "credits": 3, "term": "summer-2025", "grade": "B+" },
-		{ "code": "CS4092", "credits": 3, "term": "summer-2025", "grade": "B" },
-		{ "code": "EECE3093C", "credits": 4, "term": "summer-2025", "grade": "B" },
-		{ "code": "PSYC1001", "credits": 3, "term": "summer-2025", "grade": "A-" },
-
-		{ "code": "COOP4011", "credits": 0, "term": "fall-2025", "grade": "S" },
-
-		{ "code": "CS4033", "credits": 3, "term": "spring-2026", "grade": "B+" },
-		{ "code": "CS4065", "credits": 3, "term": "spring-2026", "grade": "B" },
-		{ "code": "EECE4029", "credits": 3, "term": "spring-2026", "grade": "B+" },
-		{ "code": "ENGL4092", "credits": 3, "term": "spring-2026", "grade": "A-" },
-		{ "code": "PHIL1001", "credits": 3, "term": "spring-2026", "grade": "B+" },
-
-		{ "code": "COOP4012", "credits": 0, "term": "summer-2026", "grade": "S" }
-	]
+  "schemaVersion": "1.0",
+  "studentId": "M15039880",
+  "catalogYear": 2022,
+  "entries": [
+    {
+      "code": "ENED1100",
+      "title": "Engineering Design Thinking I",
+      "credits": 3,
+      "term": "fall-2022",
+      "grade": "B",
+      "requirement": "engineering-i"
+    },
+    {
+      "code": "BIOL1081",
+      "title": "Biology I",
+      "credits": 3,
+      "term": "spring-2023",
+      "grade": "C",
+      "requirement": "science"
+    },
+    {
+      "code": "BIOL1081L",
+      "title": "Biology I Lab",
+      "credits": 1,
+      "term": "spring-2026",
+      "grade": "A",
+      "requirement": "science"
+    },
+    {
+      "code": "MATH1060",
+      "title": "Pre-Calculus & Calculus I",
+      "credits": 5,
+      "term": "fall-2022",
+      "grade": "A",
+      "requirement": "calculus-i"
+    },
+    {
+      "code": "ESL1080",
+      "title": "English Composition for International Students",
+      "credits": 3,
+      "term": "fall-2022",
+      "grade": "A",
+      "requirement": "composition"
+    },
+    {
+      "code": "CS1100",
+      "title": "Introduction to Computer Science",
+      "credits": 1,
+      "term": "fall-2022",
+      "grade": "P",
+      "requirement": "intro-cs"
+    },
+    {
+      "code": "PD1011",
+      "title": "Introduction to Co-op for CEAS",
+      "credits": 1,
+      "term": "spring-2023",
+      "grade": "A",
+      "requirement": "intro-coop"
+    },
+    {
+      "code": "EECE1080C",
+      "title": "Programming for ECE",
+      "credits": 4,
+      "term": "spring-2023",
+      "grade": "A",
+      "requirement": "cs-i"
+    },
+    {
+      "code": "ENED1120",
+      "title": "Engineering Design Thinking II",
+      "credits": 3,
+      "term": "spring-2023",
+      "grade": "B",
+      "requirement": "engineering-ii"
+    },
+    {
+      "code": "CHEM1040",
+      "title": "General Chemistry I",
+      "credits": 4,
+      "term": "fall-2022",
+      "grade": "A",
+      "requirement": "chemistry"
+    },
+    {
+      "code": "CHEM1040L",
+      "title": "General Chemistry Lab I",
+      "credits": 1,
+      "term": "fall-2022",
+      "grade": "A-",
+      "requirement": "chemistry"
+    },
+    {
+      "code": "CS2011",
+      "title": "Introduction to Computer Systems",
+      "credits": 3,
+      "term": "spring-2024",
+      "grade": "A",
+      "requirement": "systems"
+    },
+    {
+      "code": "CS2023",
+      "title": "Python Programming",
+      "credits": 3,
+      "term": "fall-2023",
+      "grade": "A",
+      "requirement": "python"
+    },
+    {
+      "code": "CS2028C",
+      "title": "Data Structures",
+      "credits": 4,
+      "term": "fall-2023",
+      "grade": "A",
+      "requirement": "structures"
+    },
+    {
+      "code": "IT2030C",
+      "title": "Information Security and Assurance",
+      "credits": 3,
+      "term": "fall-2023",
+      "grade": "A",
+      "requirement": "security"
+    },
+    {
+      "code": "MATH2076",
+      "title": "Linear Algebra",
+      "credits": 3,
+      "term": "fall-2023",
+      "grade": "A",
+      "requirement": "linear-algebra"
+    },
+    {
+      "code": "CS3003",
+      "title": "Programming Languages",
+      "credits": 3,
+      "term": "fall-2025",
+      "grade": "A",
+      "requirement": "languages"
+    },
+    {
+      "code": "CS2071",
+      "title": "Discrete Computational Structures",
+      "credits": 3,
+      "term": "fall-2023",
+      "grade": "A",
+      "requirement": "discrete"
+    },
+    {
+      "code": "ESL1011",
+      "title": "Introduction to U.S. College Culture",
+      "credits": 1,
+      "term": "fall-2022",
+      "grade": "A",
+      "requirement": "statistics",
+      "notes": "01"
+    },
+    {
+      "code": "STAT2037",
+      "title": "Probability & Statistics I",
+      "credits": 2.01,
+      "term": "fall-2023",
+      "grade": "TA",
+      "requirement": "statistics",
+      "transfer": true
+    },
+    {
+      "code": "ESL2089",
+      "title": "Intermediate Composition for International Students",
+      "credits": 3,
+      "term": "spring-2024",
+      "grade": "A",
+      "requirement": "intermediate-composition"
+    },
+    {
+      "code": "PD2050",
+      "title": "Mid-Curricular Co-op Community for Engineering",
+      "credits": 1,
+      "term": "spring-2025",
+      "grade": "A",
+      "requirement": "coop-community"
+    },
+    {
+      "code": "CS4092",
+      "title": "Database Design and Development",
+      "credits": 3,
+      "term": "spring-2024",
+      "grade": "A",
+      "requirement": "database"
+    },
+    {
+      "code": "EECE3093C",
+      "title": "Software Engineering",
+      "credits": 4,
+      "term": "spring-2025",
+      "grade": "A",
+      "requirement": "software"
+    },
+    {
+      "code": "CS4071",
+      "title": "Design and Analysis of Algorithms",
+      "credits": 3,
+      "term": "spring-2024",
+      "grade": "A",
+      "requirement": "algorithms"
+    },
+    {
+      "code": "EECE4029",
+      "title": "Operating Systems and Systems Programming",
+      "credits": 3,
+      "term": "spring-2025",
+      "grade": "A",
+      "requirement": "operating-systems"
+    },
+    {
+      "code": "CS4033",
+      "title": "AI: Principles and Applications",
+      "credits": 3,
+      "term": "spring-2024",
+      "grade": "B+",
+      "requirement": "ai"
+    },
+    {
+      "code": "ENGL4092",
+      "title": "Technical and Scientific Writing",
+      "credits": 3,
+      "term": "spring-2025",
+      "grade": "A",
+      "requirement": "technical-writing"
+    },
+    {
+      "code": "CS4065",
+      "title": "Computer Networks",
+      "credits": 3,
+      "term": "spring-2024",
+      "grade": "A",
+      "requirement": "networks"
+    },
+    {
+      "code": "CS5001",
+      "title": "Computer Science Senior Design I",
+      "credits": 3,
+      "term": "fall-2025",
+      "grade": "A",
+      "requirement": "senior-design-i"
+    },
+    {
+      "code": "CS5153",
+      "title": "Network Security",
+      "credits": 3,
+      "term": "spring-2025",
+      "grade": "A",
+      "requirement": "cs-electives"
+    },
+    {
+      "code": "CS5165",
+      "title": "Introduction to Cloud Computing",
+      "credits": 3,
+      "term": "spring-2025",
+      "grade": "A",
+      "requirement": "cs-electives"
+    },
+    {
+      "code": "CS5170",
+      "title": "Theory of Formal Languages and Automata",
+      "credits": 3,
+      "term": "spring-2026",
+      "grade": "B",
+      "requirement": "automata"
+    },
+    {
+      "code": "CS5002",
+      "title": "Computer Science Senior Design II",
+      "credits": 3,
+      "term": "spring-2026",
+      "grade": "A",
+      "requirement": "senior-design-ii"
+    },
+    {
+      "code": "CS5136",
+      "title": "Virtual, Augmented, & Mixed Reality",
+      "credits": 3,
+      "term": "spring-2026",
+      "grade": "A",
+      "requirement": "advanced-electives"
+    },
+    {
+      "code": "EECE5132",
+      "title": "Software Test & Quality Assurance",
+      "credits": 3,
+      "term": "fall-2025",
+      "grade": "A",
+      "requirement": "advanced-electives"
+    },
+    {
+      "code": "FAM2035",
+      "title": "Taylor Swift in Context",
+      "credits": 3,
+      "term": "fall-2025",
+      "grade": "A",
+      "requirement": "breadth"
+    },
+    {
+      "code": "AMEC2050C",
+      "title": "Web Design I",
+      "credits": 3,
+      "term": "spring-2026",
+      "grade": "A",
+      "requirement": "general-education"
+    },
+    {
+      "code": "HORT4080",
+      "title": "Introduction to Beer",
+      "credits": 3,
+      "term": "fall-2025",
+      "grade": "A",
+      "requirement": "unused"
+    }
+  ]
 }

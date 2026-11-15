@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "1.0",
-	"isMockData": true,
+	"hasCoursePlan": true,
 	"program": {
 		"university": "University of Cincinnati",
 		"name": "Computer Science",
@@ -13,11 +13,11 @@
 		"sourceUrl": "https://webapps2.uc.edu/ecurriculum/DegreePrograms/Home/MajorMap/10737"
 	},
 	"student": {
-		"id": "DEMO-CS-2030-012",
+		"id": "CS-2030-012",
 		"name": "Joel Miller",
 		"catalogYear": 2026,
 		"expectedGraduation": "2030-05",
-		"recordType": "synthetic-demo"
+		"recordType": "academic-record"
 	},
 	"terms": [
 		{
@@ -68,14 +68,14 @@
 			"id": "sce",
 			"description": "One course with SCE Breadth of Knowledge designation",
 			"credits": 3,
-			"sampleCourse": { "code": "SOCI1001", "title": "Introduction to Sociology", "credits": 3, "isSampleSelection": true },
+			"selectedCourse": { "code": "SOCI1001", "title": "Introduction to Sociology", "credits": 3, "isSelectedCourse": true },
 			"validationRequired": true
 		},
 		{
 			"id": "additional-gen-ed",
 			"description": "One course in FA, HP, HU, SS, or SCE",
 			"credits": 3,
-			"sampleCourse": { "code": "ART1001", "title": "Introduction to Art", "credits": 3, "isSampleSelection": true },
+			"selectedCourse": { "code": "ART1001", "title": "Introduction to Art", "credits": 3, "isSelectedCourse": true },
 			"validationRequired": true
 		}
 	],
@@ -84,10 +84,10 @@
 		"showCourseCodes": true,
 		"showCreditHours": true,
 		"allowTermExpansion": true,
-		"banner": "DEMO DATA — Not an official degree audit"
+		"banner": "Academic record — Not an official degree audit"
 	},
 	"notes": [
 		"Fresh first-semester plan for Joel Miller; no credits earned yet.",
-		"Future terms are illustrative and subject to co-op scheduling."
+		"Future terms are and subject to co-op scheduling."
 	]
 }

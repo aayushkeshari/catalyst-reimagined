@@ -13,8 +13,8 @@ export const toast=writable(null);
 let toastTimer;
 export function notify(message,options={}) { clearTimeout(toastTimer);toast.set({message,...options});toastTimer=setTimeout(()=>toast.set(null),options.action?15000:6500); }
 export function updateData(next) { const p=get(profile); data.set(next); if(!safeWrite(prefix+p.id,next))storageUnavailable.set(true); }
-export function changeProfile(id) { const p=PROFILES.find(x=>x.id===id);if(!p)return;profile.set(p);data.set(hydrateState(safeRead(prefix+id),p));safeWrite('catalyst.demo.active',id);notify(`Now exploring as ${p.name}.`); }
-export function resetDemo() { const p=get(profile);updateData(createState(p));notify('This demo profile has been reset.'); }
+export function changeProfile(id) { const p=PROFILES.find(x=>x.id===id);if(!p)return;profile.set(p);data.set(hydrateState(safeRead(prefix+id),p));safeWrite('catalyst.demo.active',id);notify(`Now viewing ${p.name}.`); }
+export function resetWorkspace() { const p=get(profile);updateData(createState(p));notify('This workspace has been reset.'); }
 export function setTerm(id) { updateData({...get(data),termId:id}); }
 export function toggleTask(id) { const s=get(data);updateData({...s,completedTasks:s.completedTasks.includes(id)?s.completedTasks.filter(x=>x!==id):[...s.completedTasks,id]}); }
 export function setTheme(value) { theme.set(value);safeWrite('catalyst.demo.theme',value); }

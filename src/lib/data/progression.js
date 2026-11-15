@@ -19,7 +19,7 @@ const GRADE_POINTS = {
 	F: 0.0
 };
 
-const NON_GPA_PASSING = new Set(['S', 'CR', 'P']);
+const NON_GPA_PASSING = new Set(['S', 'CR', 'P', 'TA']);
 const NON_PASSING = new Set(['F', 'W', 'I', 'IP', 'NC', 'U']);
 
 /**
@@ -37,7 +37,7 @@ export function isPassingGrade(grade) {
 export function earnedCredits(transcript) {
 	return transcript.entries
 		.filter((e) => isPassingGrade(e.grade))
-		.reduce((sum, e) => sum + e.credits, 0);
+		.reduce((sum, e) => Math.round((sum + e.credits) * 100) / 100, 0);
 }
 
 /** @param {Transcript} transcript */

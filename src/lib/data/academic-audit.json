@@ -1,0 +1,396 @@
+{
+  "source": "My Academic Requirements",
+  "requiredCredits": 125,
+  "reportedTaken": 133.01,
+  "reportedUnused": 3.01,
+  "groups": [
+    {
+      "stage": "First Year Computer Science: Fall",
+      "id": "engineering-i",
+      "title": "Engineering Design Thinking I",
+      "description": "Complete ENED1100.",
+      "credits": 3,
+      "courses": [
+        "ENED1100"
+      ]
+    },
+    {
+      "stage": "First Year Computer Science: Fall",
+      "id": "science",
+      "title": "Science Elective",
+      "description": "Complete PHYS2001 and PHYS2001L or BIOL1081 and BIOL1081L.",
+      "credits": 4,
+      "courses": [
+        "BIOL1081",
+        "BIOL1081L"
+      ]
+    },
+    {
+      "stage": "First Year Computer Science: Fall",
+      "id": "calculus-i",
+      "title": "Calculus I",
+      "description": "Complete MATH1061. A minimum grade of C\u2212 is required before MATH1062.",
+      "credits": 4,
+      "courses": [
+        "MATH1060"
+      ]
+    },
+    {
+      "stage": "First Year Computer Science: Fall",
+      "id": "composition",
+      "title": "English Composition",
+      "description": "Complete ENGL1001. A minimum grade of C\u2212 is required before ENGL2089.",
+      "credits": 3,
+      "courses": [
+        "ESL1080"
+      ]
+    },
+    {
+      "stage": "First Year Computer Science: Fall",
+      "id": "intro-cs",
+      "title": "Intro to Computer Science",
+      "description": "Complete CS1100.",
+      "credits": 1,
+      "courses": [
+        "CS1100"
+      ]
+    },
+    {
+      "stage": "First Year Computer Science: Spring",
+      "id": "intro-coop",
+      "title": "Introduction to Co-op for CEAS",
+      "description": "Complete PD1011. A minimum grade of C\u2212 is required before COOP2011.",
+      "credits": 1,
+      "courses": [
+        "PD1011"
+      ]
+    },
+    {
+      "stage": "First Year Computer Science: Spring",
+      "id": "cs-i",
+      "title": "Computer Science I",
+      "description": "Complete EECE2080C. A minimum grade of C\u2212 is required before CS2011.",
+      "credits": 4,
+      "courses": [
+        "EECE1080C"
+      ]
+    },
+    {
+      "stage": "First Year Computer Science: Spring",
+      "id": "engineering-ii",
+      "title": "Engineering Design Thinking II",
+      "description": "Complete ENED1120.",
+      "credits": 3,
+      "courses": [
+        "ENED1120"
+      ]
+    },
+    {
+      "stage": "First Year Computer Science: Spring",
+      "id": "chemistry",
+      "title": "General Chemistry I with Lab",
+      "description": "Complete CHEM1040 and CHEM1040L.",
+      "credits": 5,
+      "courses": [
+        "CHEM1040",
+        "CHEM1040L"
+      ]
+    },
+    {
+      "stage": "First Year Computer Science: Spring",
+      "id": "calculus-ii",
+      "title": "Calculus II",
+      "description": "Complete MATH1062. A minimum grade of C\u2212 is required before MATH2076.",
+      "credits": 4,
+      "courses": [
+        "MATH1062"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 2 Fall/Spring",
+      "id": "systems",
+      "title": "Introduction to Computer Systems",
+      "description": "Complete CS2011.",
+      "credits": 3,
+      "courses": [
+        "CS2011"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 2 Fall/Spring",
+      "id": "python",
+      "title": "Python Programming",
+      "description": "Complete CS2023. A minimum grade of C\u2212 is required before CS4065.",
+      "credits": 3,
+      "courses": [
+        "CS2023"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 2 Fall/Spring",
+      "id": "structures",
+      "title": "Data Structures",
+      "description": "Complete CS2028C. A minimum grade of C\u2212 is required before CS4071.",
+      "credits": 4,
+      "courses": [
+        "CS2028C"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 2 Fall/Spring",
+      "id": "security",
+      "title": "Information Security and Assurance",
+      "description": "Complete IT2030C.",
+      "credits": 3,
+      "courses": [
+        "IT2030C"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 2 Fall/Spring",
+      "id": "linear-algebra",
+      "title": "Linear Algebra",
+      "description": "Complete MATH2076.",
+      "credits": 3,
+      "courses": [
+        "MATH2076"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 2 Summer/Year 3 Fall",
+      "id": "languages",
+      "title": "Programming Languages",
+      "description": "The report lists CS4003 as the requirement and applies CS3003.",
+      "credits": 3,
+      "courses": [
+        "CS3003"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 2 Summer/Year 3 Fall",
+      "id": "discrete",
+      "title": "Discrete Computational Structures",
+      "description": "Complete CS2071.",
+      "credits": 3,
+      "courses": [
+        "CS2071"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 2 Summer/Year 3 Fall",
+      "id": "statistics",
+      "title": "Probability and Statistics",
+      "description": "Complete STAT2037. The report applies 0.99 credits from ESL1011 and 2.01 transfer credits from STAT2037.",
+      "credits": 3,
+      "courses": [
+        "ESL1011",
+        "STAT2037"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 2 Summer/Year 3 Fall",
+      "id": "intermediate-composition",
+      "title": "Intermediate Composition",
+      "description": "Complete ENGL2089.",
+      "credits": 3,
+      "courses": [
+        "ESL2089"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 2 Summer/Year 3 Fall",
+      "id": "coop-community",
+      "title": "Mid-Curricular Co-op Community for Engineering",
+      "description": "Complete PD2050 in the fall or spring, depending on the co-op rotation.",
+      "credits": 1,
+      "courses": [
+        "PD2050"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 3 Spring/Summer",
+      "id": "speaking",
+      "title": "Introduction to Effective Speaking",
+      "description": "Complete COMM1071.",
+      "credits": 3,
+      "courses": [
+        "COMM1071"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 3 Spring/Summer",
+      "id": "database",
+      "title": "Database Design and Development",
+      "description": "Complete CS4092.",
+      "credits": 3,
+      "courses": [
+        "CS4092"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 3 Spring/Summer",
+      "id": "software",
+      "title": "Software Engineering",
+      "description": "Complete EECE3093C or CS3093.",
+      "credits": 4,
+      "courses": [
+        "EECE3093C"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 3 Spring/Summer",
+      "id": "algorithms",
+      "title": "Design and Analysis of Algorithms",
+      "description": "Complete CS4071.",
+      "credits": 3,
+      "courses": [
+        "CS4071"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 4 Fall/Spring",
+      "id": "operating-systems",
+      "title": "Operating Systems and Systems Programming",
+      "description": "Complete EECE4029.",
+      "credits": 3,
+      "courses": [
+        "EECE4029"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 4 Fall/Spring",
+      "id": "ai",
+      "title": "AI: Principles and Applications",
+      "description": "Complete CS4033.",
+      "credits": 3,
+      "courses": [
+        "CS4033"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 4 Fall/Spring",
+      "id": "technical-writing",
+      "title": "Technical and Scientific Writing",
+      "description": "Complete ENGL4092.",
+      "credits": 3,
+      "courses": [
+        "ENGL4092"
+      ]
+    },
+    {
+      "stage": "CS Coursework Year 4 Fall/Spring",
+      "id": "networks",
+      "title": "Networks and Cloud Computing",
+      "description": "Complete CS4065.",
+      "credits": 3,
+      "courses": [
+        "CS4065"
+      ]
+    },
+    {
+      "stage": "Fifth Year Computer Science: Fall",
+      "id": "senior-design-i",
+      "title": "Computer Science Senior Design I",
+      "description": "Complete CS5001.",
+      "credits": 3,
+      "courses": [
+        "CS5001"
+      ]
+    },
+    {
+      "stage": "Fifth Year Computer Science: Fall",
+      "id": "cs-electives",
+      "title": "Computer Science Electives",
+      "description": "Complete 6 credits of CS electives. CS4005 may apply in Fall 2026 or Spring 2027.",
+      "credits": 6,
+      "courses": [
+        "CS5153",
+        "CS5165"
+      ]
+    },
+    {
+      "stage": "Fifth Year Computer Science: Fall",
+      "id": "automata",
+      "title": "Theory of Formal Language and Automata",
+      "description": "Complete CS5170.",
+      "credits": 3,
+      "courses": [
+        "CS5170"
+      ]
+    },
+    {
+      "stage": "Fifth Year Computer Science: Spring",
+      "id": "senior-design-ii",
+      "title": "Computer Science Senior Design II",
+      "description": "Complete CS5002.",
+      "credits": 3,
+      "courses": [
+        "CS5002"
+      ]
+    },
+    {
+      "stage": "Fifth Year Computer Science: Spring",
+      "id": "advanced-electives",
+      "title": "Computer Science Electives",
+      "description": "Courses applied to the remaining CS elective requirements.",
+      "credits": 9,
+      "courses": [
+        "CS5136",
+        "CS5167",
+        "EECE5132"
+      ]
+    },
+    {
+      "stage": "General Education",
+      "id": "sce",
+      "title": "Society, Culture, & Ethics",
+      "description": "Complete 3 credits with the SCE breadth of knowledge designation.",
+      "credits": 3,
+      "courses": [
+        "FAM2061"
+      ]
+    },
+    {
+      "stage": "General Education",
+      "id": "breadth",
+      "title": "Fine Arts, Historical Perspectives, or Social Science",
+      "description": "Complete 3 credits with an FA, HP, or SS breadth of knowledge designation.",
+      "credits": 3,
+      "courses": [
+        "FAM2035"
+      ]
+    },
+    {
+      "stage": "General Education",
+      "id": "general-education",
+      "title": "General Education",
+      "description": "Complete a course with an FA, HP, HU, SS, or SCE breadth of knowledge designation.",
+      "credits": 3,
+      "courses": [
+        "AMEC2050C"
+      ]
+    },
+    {
+      "stage": "Computer Science Direct Electives",
+      "id": "direct-electives",
+      "title": "Computer Science Direct Electives",
+      "description": "Complete 6 credits. The report notes that CS4003 and FIN5043 may apply only in Fall 2026.",
+      "credits": 6,
+      "courses": [
+        "CS4005",
+        "ECON1002"
+      ]
+    }
+  ],
+  "unused": [
+    {
+      "code": "ESL1011",
+      "credits": 0.01
+    },
+    {
+      "code": "HORT4080",
+      "credits": 3
+    }
+  ],
+  "reportedGpa": 3.673
+}

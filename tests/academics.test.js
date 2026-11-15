@@ -9,7 +9,7 @@ const section=(code,num)=>SECTIONS.find(s=>s.code===code&&s.section===num).id;
 test('term grade reports separate final grades, current coursework, and future enrollment',()=>{
   const state=createState(profile);
   const historical=termGrades(profile,state,'fall-2022');
-  assert.equal(historical.rows.length,6);assert.equal(historical.earned,16);assert.ok(Number(historical.gpa)>0);
+  assert.equal(historical.rows.length,7);assert.equal(historical.earned,18);assert.ok(Number(historical.gpa)>0);
   const current=termGrades(profile,state,'fall-2026');
   assert.equal(current.gpa,null);assert.equal(current.earned,0);assert.ok(current.rows.every(r=>r.grade==='IP'));
   const next=enrollSections(state,profile,[section('CS5002','001')],'spring-2027').state;
@@ -48,7 +48,7 @@ test('what-if comparisons leave the current program, transcript, enrollment, and
 test('sample report exports escape record text and cannot claim an awarded degree',()=>{
   const state=createState(profile),p={...profile,name:'<script>alert(1)</script>'};
   const report={id:'R1',type:'Unofficial Record',term:'fall-2026',createdAt:new Date().toISOString()};
-  const html=reportHTML(p,state,report);assert.ok(!html.includes('<script>'));assert.ok(html.includes('&lt;script&gt;'));assert.ok(html.includes('NOT AN OFFICIAL'));
+  const html=reportHTML(p,state,report);assert.ok(!html.includes('<script>'));assert.ok(html.includes('&lt;script&gt;'));assert.ok(html.includes('Unofficial student record'));
   assert.ok(reportHTML(profile,state,{...report,type:'Degree Letter'}).includes('No degree has been conferred'));
   assert.equal(academicRows(profile,state).filter(r=>r.status==='In progress').length,5);
 });
