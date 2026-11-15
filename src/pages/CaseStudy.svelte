@@ -6,7 +6,7 @@ import Icon from '../lib/components/Icon.svelte';
 const chapters = [
   ['overview', 'Project'], ['research', 'Research'], ['design', 'Design'],
   ['interface', 'Interface'], ['feedback', 'Feedback'], ['implementation', 'Implementation'],
-  ['future', 'Future work']
+  ['demo', 'Video'], ['future', 'Future work']
 ];
 function jump(event, id) {
   event.preventDefault();
@@ -155,8 +155,13 @@ const modules = [
   </section>
 
   <section class="case-section" id="demo" tabindex="-1">
-    <span class="eyebrow">07 / Presentation</span>
-    <h2>Walk through the design story.</h2>
+    <span class="eyebrow">07 / Video & presentation</span>
+    <h2>Watch the recorded walkthrough.</h2>
+    {#if project.demoVideo}
+      <p>Aayush Keshari demonstrates the working Catalyst prototype. Full walkthrough · {project.demoDuration}.</p>
+      <iframe class="case-demo-player" src={project.demoEmbedUrl} title="Catalyst, redesigned — recorded walkthrough by Aayush Keshari" width="960" height="540" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p><a class="text-link" href={project.demoVideo} target="_blank" rel="noreferrer">Watch on YouTube<Icon name="external" size={15}/></a></p>
+    {/if}
     <p>The final presentation summarizes the problem, research, design decisions, workflow, verification, and next steps, with timed notes for the team.</p>
     <a class="button secondary" href="./presentation.html" target="_blank" rel="noreferrer">Open final presentation<Icon name="external" size={15}/></a>
   </section>
@@ -170,7 +175,7 @@ const modules = [
       <li><strong>Evaluate accessibility more broadly.</strong> Run screen-reader sessions, keyboard and focus checks, zoom/reflow checks, contrast review, and physical-device testing. The current responsive screenshots and semantic controls do not constitute a WCAG conformance audit.</li>
       <li><strong>Extend the unfinished academic capabilities.</strong> The transfer-credit explanation and waitlist labels show where the present prototype stops. A next iteration could add advisor-reviewed equivalencies, meaningful waitlist position and notification states, linked lecture/lab choices, and changing seat inventory.</li>
       <li><strong>Validate academic rules and dates.</strong> Replace illustrative classifications, graduation assumptions, and milestones with an advisor-approved model before considering real university integration. Keep personal targets clearly separate from official deadlines.</li>
-      <li><strong>Record a narrated demonstration.</strong> Capture the current interface with team-member voiceover, showing class discovery, conflict recovery, confirmation, progress, and personal targets. Add captions and verify the final recording.</li>
+      <li><strong>Review video accessibility.</strong> Check the uploaded walkthrough’s captions and playback across desktop and mobile, correcting any transcript errors.</li>
     </ol>
     <p><strong>Reflection:</strong> the most consequential redesign was the distinction between a plan and a confirmed outcome. Once that distinction was explicit in the data and workflow, the interface could explain what had happened, what was still uncertain, and how to continue. Future research should test whether students interpret those distinctions as intended.</p>
     <p class="fine-print">Progress toward unfinished features is visible above: the class-search screenshot shows the full-section waitlist limitations, and the academic-progress screenshot shows transfer-credit guidance without an equivalency evaluator. These are documented scope boundaries, not completed integrations.</p>
@@ -179,6 +184,7 @@ const modules = [
 </div>
 
 <style>
+.case-demo-player{display:block;width:100%;height:auto;aspect-ratio:16/9;border:0;border-radius:10px;background:#111;margin:22px 0}
 .case-contents{padding:24px 0;border-bottom:1px solid var(--line)}
 .case-contents>div{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:13px}
 .case-contents a{font-size:12px;text-decoration:underline;text-underline-offset:4px}
@@ -205,5 +211,5 @@ const modules = [
 .case-section table caption{text-align:left;font-weight:600;margin-bottom:12px;font-size:12px;color:var(--muted)}
 .case-section code{overflow-wrap:anywhere;font-size:11px}
 @media(max-width:650px){.case-summary-grid,.case-shot-grid{grid-template-columns:1fr}.case-phone-shots{max-width:375px;gap:28px}.case-walkthrough>h3{font-size:24px}.case-contents a{padding:5px 0}.case-palette{flex-wrap:wrap}.case-palette>span{flex-basis:50%}.case-contents>div{gap:6px 18px}}
-@media print{.case-contents{display:none}.case-shot-grid{display:block}.case-shot{break-inside:avoid;margin:24px 0!important}.case-shot img{max-height:650px;object-fit:contain;object-position:left top}.case-walkthrough{break-inside:auto}.case-contents a,.case-shot figcaption a{display:none}}
+@media print{.case-contents,.case-demo-player{display:none}.case-shot-grid{display:block}.case-shot{break-inside:avoid;margin:24px 0!important}.case-shot img{max-height:650px;object-fit:contain;object-position:left top}.case-walkthrough{break-inside:auto}.case-contents a,.case-shot figcaption a{display:none}}
 </style>
