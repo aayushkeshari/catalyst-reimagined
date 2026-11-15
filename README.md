@@ -2,8 +2,7 @@
 
 A student-centered redesign of the University of Cincinnati's Catalyst portal. The working Svelte prototype connects class discovery, section comparison, a term-specific enrollment cart, validation, confirmation, and a responsive schedule.
 
-**Student project:** Aayush Keshari · Nipun Chandra · Shivam Kharangate. All student records, sections, seat counts, balances, and enrollment actions are synthetic. This application is not connected to UC systems.
-
+**Student project:** Aayush Keshari · Nipun Chandra · Shivam Kharangate
 ## Run
 
 Requires Node.js 22.12+ (Node 24 recommended).
